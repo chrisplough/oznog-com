@@ -686,30 +686,47 @@ body:has(.hero) footer:not(article footer) {
 
 /* ===== FIX VIEWPORT HEIGHT ISSUE ===== */
 /* Congo uses h-screen which forces exact viewport height */
-/* Only apply min-height to pages that need sticky footer (homepage, list pages) */
-/* Post pages use section-specific layout without h-screen */
+/* This causes huge gaps above footer - disable flex grow everywhere */
 html {
   height: auto !important;
 }
 
-/* Body min-height only for pages with flex layout (have h-screen class) */
-body.h-screen {
-  height: auto !important;
-  min-height: 100vh !important;
-}
-
-/* Post pages (no h-screen) should have natural height */
-body:not(.h-screen) {
+body {
   height: auto !important;
   min-height: auto !important;
 }
 
-body.h-screen > div,
-body.h-screen > div > main,
-body.h-screen .flex.grow,
-body.h-screen .grow {
+/* Target Congo's specific structure: body > div.grow > main.grow */
+/* The div wrapper around main and footer */
+body > div.relative.flex.grow.flex-col {
   flex-grow: 0 !important;
-  flex: none !important;
+  flex: 0 0 auto !important;
+}
+
+/* The main element */
+body main#main-content,
+main#main-content.grow {
+  flex-grow: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Tailwind's grow class - need high specificity to beat inline Tailwind */
+.grow,
+div.grow,
+main.grow,
+body .grow,
+body div.grow,
+body main.grow,
+[class*="grow"] {
+  flex-grow: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Also override h-screen on body */
+body.h-screen,
+.h-screen {
+  height: auto !important;
+  min-height: auto !important;
 }
 
 /* ===== UPDATES / LIST PAGE STYLING ===== */
@@ -844,35 +861,6 @@ article > footer.max-w-prose > div.pt-8 > hr {
   display: none !important;
 }
 
-/* Single post page - remove h-screen to allow natural height */
-body:has(.single-post-page) {
-  height: auto !important;
-  min-height: auto !important;
-}
-
-/* Single post page - override the h-screen class */
-body.h-screen:has(.single-post-page) {
-  height: auto !important;
-}
-
-/* Single post page - prevent flex grow from pushing footer down */
-body:has(.single-post-page) > div,
-body:has(.single-post-page) > div.relative,
-body:has(.single-post-page) > div.grow,
-body:has(.single-post-page) > div.flex,
-body:has(.single-post-page) main,
-body:has(.single-post-page) main.grow,
-.single-post-page {
-  flex-grow: 0 !important;
-  flex: 0 0 auto !important;
-}
-
-/* Force the wrapper div to not fill viewport */
-body:has(.single-post-page) > div.relative.flex.grow.flex-col {
-  flex-grow: 0 !important;
-  flex: none !important;
-  height: auto !important;
-}
 
 /* Back to top button - move further right */
 #to-top {
