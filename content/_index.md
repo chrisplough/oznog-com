@@ -9,7 +9,9 @@ description: "Sovereign infrastructure for the fifth story"
 
 <div class="subhead">
 
-Working with AI feels like finally thinking at the speed of your mind. Then you step away. And you feel the withdrawal.
+Working with AI feels like finally creating at the speed of your mind. Then you step away. And you feel the withdrawal.
+
+It's NZT. The pill from Limitless. Not new capability exactly - more like flow you forgot you had access to. And like any drug, the dealer sets the terms.
 
 Current AI architecture is extractive by design.
 
