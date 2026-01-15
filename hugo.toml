@@ -1,0 +1,53 @@
+baseURL = "https://oznog.com/"
+languageCode = "en-us"
+title = "Oznog"
+theme = "congo"
+buildFuture = true
+copyright = "© 2011-2026 [Oznog Holdings LLC](https://oznog.com) · Founded by [Christoph Plough](https://chrisplough.com) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+
+[params]
+  colorScheme = "oznog"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = false
+  defaultThemeColor = "#0D0D0D"
+  enableSearch = false
+  enableCodeCopy = true
+
+  # External links open in new tab
+  [params.externalLinks]
+    openInNewTab = true
+
+  [params.header]
+    layout = "basic"
+    logo = "images/logo.png"
+    logoDark = "images/logo.png"
+    showTitle = false
+
+  [params.footer]
+    showCopyright = true
+    showThemeAttribution = false
+    showAppearanceSwitcher = false
+    showScrollToTop = true
+
+  [params.homepage]
+    layout = "custom"
+    showRecent = false
+
+  [params.article]
+    showDate = true
+    showDateUpdated = false
+    showAuthor = false
+    showBreadcrumbs = false
+    showTableOfContents = false
+    showRelatedContent = false
+    showTaxonomies = false
+    showWordCount = false
+    showComments = false
+    sharingLinks = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false

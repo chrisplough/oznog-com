@@ -1,0 +1,10 @@
+<!-- Google Fonts: Space Grotesk + JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+{{ $custom := resources.Get "css/custom.css" }}
+{{ if $custom }}
+  <link rel="stylesheet" href="{{ $custom.Permalink }}">
+{{ end }}

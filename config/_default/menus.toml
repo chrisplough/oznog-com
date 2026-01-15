@@ -1,0 +1,70 @@
+# Main navigation
+[[main]]
+  name = "The Problem"
+  url = "/#the-problem"
+  weight = 10
+
+[[main]]
+  name = "What We Build"
+  url = "/#what-we-build"
+  weight = 20
+
+[[main]]
+  name = "Node0"
+  url = "/#node0"
+  weight = 30
+
+[[main]]
+  name = "For Builders"
+  url = "/#for-builders"
+  weight = 40
+
+[[main]]
+  name = "Updates"
+  pageRef = "/updates"
+  weight = 50
+
+# CTA link - external, opens in new tab
+[[main]]
+  name = "Worth Choosing →"
+  url = "https://worthchoosing.org"
+  weight = 60
+  [main.params]
+    target = "_blank"
+
+# Footer navigation - reordered: why, what we stand for, who, opportunity, what's happening, action
+[[footer]]
+  name = "Worth Choosing →"
+  url = "https://worthchoosing.org"
+  weight = 10
+  [footer.params]
+    target = "_blank"
+
+[[footer]]
+  name = "Our Values →"
+  url = "https://worthchoosing.org/values/"
+  weight = 20
+  [footer.params]
+    target = "_blank"
+
+[[footer]]
+  name = "The Founder →"
+  url = "https://chrisplough.com/my-why"
+  weight = 30
+  [footer.params]
+    target = "_blank"
+
+[[footer]]
+  name = "Incubator"
+  pageRef = "/apply-for-incubator"
+  weight = 40
+
+[[footer]]
+  name = "Updates"
+  pageRef = "/updates"
+  weight = 50
+
+[[footer]]
+  name = "Reach Out"
+  pageRef = "/contact"
+  weight = 60

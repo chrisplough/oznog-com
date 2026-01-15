@@ -1,0 +1,22 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.121.0"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Language = ["en"]}
+  force = false
+
+# Handle form submissions
+[dev]
+  framework = "#custom"
+  command = "hugo server -D"
+  targetPort = 1313

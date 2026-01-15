@@ -1,0 +1,1135 @@
+/* Oznog Custom Styles */
+/* Dark, gritty, grounded - rock n' roll DNA with a huge beating heart */
+/* AGGRESSIVE OVERRIDES to force dark theme over Congo defaults */
+
+/* ===== Typography ===== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
+
+/* ===== Color Variables ===== */
+:root {
+  --oznog-bg-primary: #0D0D0D;
+  --oznog-bg-secondary: #121212;
+  --oznog-bg-tertiary: #1A1A1A;
+  --oznog-text-primary: #E8E8E8;
+  --oznog-text-secondary: #A0A0A0;
+  --oznog-accent: #A22F2E;
+  --oznog-accent-hover: #C43D3C;
+
+  /* Override Congo color variables */
+  --color-neutral: #0D0D0D;
+  --color-neutral-50: #E8E8E8;
+  --color-neutral-100: #A0A0A0;
+  --color-neutral-200: #666666;
+  --color-neutral-300: #444444;
+  --color-neutral-400: #333333;
+  --color-neutral-500: #222222;
+  --color-neutral-600: #1A1A1A;
+  --color-neutral-700: #121212;
+  --color-neutral-800: #0D0D0D;
+  --color-neutral-900: #000000;
+}
+
+/* ===== FORCE DARK BACKGROUNDS EVERYWHERE ===== */
+html,
+body,
+main,
+article,
+section,
+div,
+.prose,
+.container,
+.wrapper,
+[class*="bg-"],
+[class*="background"] {
+  background-color: var(--oznog-bg-primary) !important;
+  background: var(--oznog-bg-primary) !important;
+}
+
+/* Override any white/light backgrounds */
+.bg-white,
+.bg-neutral-50,
+.bg-neutral-100,
+.bg-neutral-200,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200,
+.dark\:bg-neutral-800,
+.dark\:bg-neutral-900 {
+  background-color: var(--oznog-bg-primary) !important;
+  background: var(--oznog-bg-primary) !important;
+}
+
+/* ===== REMOVE ALL CARD STYLING ===== */
+article,
+section,
+.prose,
+.card,
+[class*="card"],
+[class*="rounded"],
+main > *,
+.container > * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Content sections - full width background, constrained content */
+section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* Inner content constrained for readability */
+section > *,
+.content-section > *,
+.section-inner {
+  max-width: 48rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ===== SECTION ALTERNATING BACKGROUNDS ===== */
+/* Only apply to landing page sections, not list pages */
+.landing-page section:nth-of-type(odd),
+body:has(.hero) main > section:nth-of-type(odd) {
+  background-color: var(--oznog-bg-primary) !important;
+}
+
+.landing-page section:nth-of-type(even),
+body:has(.hero) main > section:nth-of-type(even) {
+  background-color: var(--oznog-bg-secondary) !important;
+}
+
+/* List/updates page - NO alternating backgrounds on sections */
+main section:has(article),
+main > section:not(:first-of-type) {
+  background-color: var(--oznog-bg-primary) !important;
+  background: var(--oznog-bg-primary) !important;
+}
+
+/* Alternating backgrounds on individual articles/posts - content width */
+main section article:nth-of-type(odd) {
+  background-color: var(--oznog-bg-secondary) !important;
+  background: var(--oznog-bg-secondary) !important;
+  padding: 1rem 1.5rem !important;
+  margin-left: -1.5rem !important;
+  margin-right: -1.5rem !important;
+}
+
+main section article:nth-of-type(even) {
+  background-color: transparent !important;
+  background: transparent !important;
+  padding: 1rem 0 !important;
+}
+
+.section-alt {
+  background-color: var(--oznog-bg-secondary) !important;
+}
+
+/* ===== TYPOGRAPHY ===== */
+* {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+code, pre, .mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Force text colors */
+body,
+p,
+span,
+div {
+  color: var(--oznog-text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6,
+strong,
+b,
+.font-bold,
+.font-semibold {
+  color: var(--oznog-text-primary) !important;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+}
+
+h3 {
+  font-size: 1.375rem !important;
+  font-weight: 600 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SPLATTER TEXTURE OVERLAY ===== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.08;
+  background-image: url('/images/splatter.png');
+  background-repeat: repeat;
+  background-size: 1600px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--oznog-accent) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--oznog-accent-hover) !important;
+}
+
+/* Nav links different color */
+header a,
+nav a {
+  color: var(--oznog-text-secondary) !important;
+}
+
+header a:hover,
+nav a:hover {
+  color: var(--oznog-text-primary) !important;
+}
+
+/* ===== HEADER / NAVIGATION ===== */
+header,
+nav,
+.header,
+.navbar,
+.nav,
+[class*="header"],
+[class*="nav"] {
+  background-color: var(--oznog-bg-primary) !important;
+  background: var(--oznog-bg-primary) !important;
+}
+
+/* Only site nav header gets border - not page content headers */
+body > header:first-of-type,
+body > div > header:first-of-type,
+header.py-6,
+header:has(nav) {
+  border-bottom: 1px solid #222 !important;
+}
+
+/* Page content headers (article titles etc) - no border */
+main header,
+article header {
+  border-bottom: none !important;
+}
+
+/* Logo sizing */
+header img,
+.logo img,
+nav img {
+  max-height: 2.5rem;
+  width: auto;
+}
+
+/* ===== HERO SECTION ===== */
+.hero,
+.home section:first-of-type {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -50px !important; /* Negative gap to pull hero up */
+  padding-top: 0 !important;
+  padding-bottom: 2rem !important; /* Reduced from 4rem to tighten arrow gap */
+  background-color: var(--oznog-bg-primary) !important;
+}
+
+.hero h1,
+.home section:first-of-type h1 {
+  color: var(--oznog-text-primary) !important;
+  font-size: clamp(2.75rem, 5vw, 3.75rem) !important; /* Sized to fit on one line */
+  white-space: nowrap !important; /* Keep on one line */
+  max-width: 100% !important;
+}
+
+.subhead,
+.hero p,
+.home section:first-of-type p {
+  color: var(--oznog-text-secondary);
+  max-width: 48rem; /* Wider for better flow */
+  line-height: 1.7;
+}
+
+/* Hero content container - wider */
+.hero > *,
+.home section:first-of-type > * {
+  max-width: 56rem !important;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+/* Pull first content section up closer to hero arrow */
+.content-section:first-of-type,
+section#the-problem,
+#the-problem {
+  margin-top: -50px !important;
+  padding-top: 3rem !important;
+}
+
+.content-section p {
+  color: var(--oznog-text-secondary);
+}
+
+.content-section strong {
+  color: var(--oznog-text-primary) !important;
+  font-weight: 600;
+}
+
+/* ===== LISTS (content only, not nav/footer) ===== */
+ul, ol {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 1.5rem;
+}
+
+/* Content lists get red square bullets */
+main ul li,
+main ol li,
+section ul li,
+article ul li,
+.content-section ul li,
+.prose ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--oznog-text-secondary);
+  font-size: 1.125rem;
+}
+
+main ul li::before,
+main ol li::before,
+section ul li::before,
+article ul li::before,
+.content-section ul li::before,
+.prose ul li::before {
+  content: '' !important;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--oznog-accent) !important;
+}
+
+/* NAV lists - NO red squares */
+header li,
+nav li,
+footer li,
+header ul li,
+nav ul li,
+footer ul li {
+  padding: 0 !important;
+  padding-left: 0 !important;
+}
+
+header li::before,
+nav li::before,
+footer li::before,
+header ul li::before,
+nav ul li::before,
+footer ul li::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove default list markers */
+li::marker {
+  content: none !important;
+  display: none !important;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary,
+button[type="submit"],
+input[type="submit"],
+a.btn-primary {
+  display: inline-block;
+  background-color: var(--oznog-accent) !important;
+  background: var(--oznog-accent) !important;
+  color: var(--oznog-text-primary) !important;
+  padding: 0.875rem 1.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+a.btn-primary:hover {
+  background-color: var(--oznog-accent-hover) !important;
+  background: var(--oznog-accent-hover) !important;
+  color: var(--oznog-text-primary) !important;
+}
+
+.btn-secondary,
+a.btn-secondary {
+  display: inline-block;
+  border: 1px solid var(--oznog-accent) !important;
+  color: var(--oznog-accent) !important;
+  padding: 0.875rem 1.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover,
+a.btn-secondary:hover {
+  background-color: var(--oznog-accent) !important;
+  background: var(--oznog-accent) !important;
+  color: var(--oznog-text-primary) !important;
+}
+
+/* ===== FORMS ===== */
+form {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--oznog-bg-tertiary) !important;
+  background: var(--oznog-bg-tertiary) !important;
+  border: 1px solid #333 !important;
+  border-radius: 0 !important;
+  color: var(--oznog-text-primary) !important;
+  padding: 0.75rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Contact form - wider fields */
+form input,
+form textarea,
+form select {
+  max-width: 36rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--oznog-accent) !important;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--oznog-text-secondary) !important;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer,
+.footer,
+[class*="footer"] {
+  background-color: var(--oznog-bg-tertiary) !important;
+  background: var(--oznog-bg-tertiary) !important;
+  border-top: 1px solid #222 !important;
+  padding: 2rem 2rem !important;
+}
+
+/* Footer navigation links */
+footer nav,
+footer ul,
+footer .footer-menu {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.5rem 1.5rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.25rem 0 !important;
+}
+
+footer nav a,
+footer ul a,
+.footer a,
+footer a {
+  color: var(--oznog-text-secondary) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  font-size: 0.9375rem !important; /* 15px - slightly larger */
+}
+
+footer nav a:hover,
+footer ul a:hover,
+.footer a:hover,
+footer a:hover {
+  color: var(--oznog-accent) !important;
+}
+
+/* Footer copyright container - center it */
+footer > div.flex.items-center.justify-between {
+  justify-content: center !important;
+}
+
+/* Footer copyright styling */
+footer small,
+footer .copyright,
+footer p {
+  color: var(--oznog-text-secondary) !important;
+  display: block !important;
+  text-align: center !important;
+  margin-top: 1rem !important;
+}
+
+footer small a,
+footer .copyright a,
+footer p a {
+  color: var(--oznog-accent) !important;
+}
+
+footer small a:hover,
+footer .copyright a:hover,
+footer p a:hover {
+  color: var(--oznog-accent-hover) !important;
+}
+
+/* ===== DIVIDERS / HR ===== */
+hr {
+  border: none !important;
+  border-top: 1px solid #333 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* ===== BLOCKQUOTES ===== */
+blockquote {
+  border-left: 3px solid var(--oznog-accent) !important;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: normal;
+  background: transparent !important;
+}
+
+blockquote p {
+  color: var(--oznog-text-secondary);
+}
+
+/* ===== EMPHASIS ===== */
+em {
+  font-style: italic;
+  color: var(--oznog-text-secondary);
+}
+
+small, .text-small {
+  font-size: 0.875rem;
+  color: var(--oznog-text-secondary);
+}
+
+/* ===== SCROLL BEHAVIOR ===== */
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero,
+  section:first-of-type {
+    min-height: auto;
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .content-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  section > *,
+  .content-section > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* ===== PROSE OVERRIDES (Congo specific) ===== */
+.prose,
+.prose-lg,
+.prose-xl,
+[class*="prose"] {
+  --tw-prose-body: var(--oznog-text-secondary) !important;
+  --tw-prose-headings: var(--oznog-text-primary) !important;
+  --tw-prose-links: var(--oznog-accent) !important;
+  --tw-prose-bold: var(--oznog-text-primary) !important;
+  --tw-prose-quotes: var(--oznog-text-secondary) !important;
+  --tw-prose-code: var(--oznog-text-primary) !important;
+  --tw-prose-hr: #333 !important;
+  color: var(--oznog-text-secondary) !important;
+  max-width: none !important;
+}
+
+.prose p,
+[class*="prose"] p {
+  color: var(--oznog-text-secondary) !important;
+}
+
+.prose strong,
+[class*="prose"] strong {
+  color: var(--oznog-text-primary) !important;
+}
+
+.prose a,
+[class*="prose"] a {
+  color: var(--oznog-accent) !important;
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+main {
+  background-color: var(--oznog-bg-primary) !important;
+}
+
+/* Only apply min-height to main on pages with sticky footer layout */
+body.h-screen main {
+  min-height: 100vh;
+}
+
+main > article,
+main > section,
+main > div {
+  background-color: transparent !important;
+}
+
+/* ===== LANDING PAGE SPECIFIC ===== */
+.landing-page {
+  background-color: var(--oznog-bg-primary) !important;
+}
+
+.landing-page > * {
+  background-color: transparent;
+}
+
+/* Alternating section backgrounds for landing page */
+.landing-page > section:nth-child(odd),
+.landing-page > hr + section:nth-child(even) {
+  background-color: var(--oznog-bg-primary) !important;
+}
+
+.landing-page > section:nth-child(even),
+.landing-page > hr + section:nth-child(odd) {
+  background-color: var(--oznog-bg-secondary) !important;
+}
+
+/* ===== HIDE UNWANTED ELEMENTS ===== */
+.appearance-switcher,
+[class*="appearance"],
+[class*="theme-toggle"] {
+  display: none !important;
+}
+
+/* ===== HOME PAGE - footer spacing ===== */
+.home ~ footer,
+body:has(.hero) footer:not(article footer) {
+  margin-top: 3.5rem !important;
+}
+
+/* ===== FIX VIEWPORT HEIGHT ISSUE ===== */
+/* Congo uses h-screen which forces exact viewport height */
+/* Only apply min-height to pages that need sticky footer (homepage, list pages) */
+/* Post pages use section-specific layout without h-screen */
+html {
+  height: auto !important;
+}
+
+/* Body min-height only for pages with flex layout (have h-screen class) */
+body.h-screen {
+  height: auto !important;
+  min-height: 100vh !important;
+}
+
+/* Post pages (no h-screen) should have natural height */
+body:not(.h-screen) {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+body.h-screen > div,
+body.h-screen > div > main,
+body.h-screen .flex.grow,
+body.h-screen .grow {
+  flex-grow: 0 !important;
+  flex: none !important;
+}
+
+/* ===== UPDATES / LIST PAGE STYLING ===== */
+
+/* Year headings - subtle organizational labels, NOT prominent headers */
+/* Target the specific h2 used in list.html: h2.mt-12.text-2xl.font-bold */
+main section h2.mt-12,
+main h2.mt-12,
+h2.mt-12.text-2xl,
+section h2.text-2xl.font-bold,
+h2.text-neutral-700,
+h2.dark\:text-neutral-300 {
+  /* Remove background box */
+  background: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+
+  /* Visible styling - use highlight white */
+  color: var(--oznog-text-primary) !important; /* #E8E8E8 - same as highlighted text */
+  font-size: 1.25rem !important; /* Larger for clear section marker */
+  font-weight: 500 !important; /* Not bold */
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+
+  /* Force flush left alignment */
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  width: 100% !important;
+  display: block !important;
+
+  /* Spacing */
+  margin-top: 2.5rem !important; /* Space above between year groups */
+  margin-bottom: 0.75rem !important; /* Tighter below */
+}
+
+/* First year heading - tighter gap after description */
+main section h2.mt-12:first-of-type,
+main section h2.first\:mt-8:first-of-type,
+section > h2:first-of-type {
+  margin-top: 0.75rem !important; /* Tight gap after "Building in public..." */
+}
+
+/* Remove the dotted hr under year heading completely */
+main hr.border-dotted,
+hr.border-dotted,
+section hr.border-dotted,
+hr.w-36.border-dotted {
+  display: none !important;
+}
+
+/* Post list container - flush left with page title */
+main > section:not(.prose),
+main section:has(article) {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Post list alignment - flush left with title */
+main section article,
+section article.mt-6,
+article.mt-6.flex {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  max-width: none !important;
+}
+
+/* Post item spacing - slightly tighter */
+article.mt-6,
+main section article {
+  margin-top: 1.25rem !important; /* Tighter than default 1.5rem */
+  margin-bottom: 0 !important;
+}
+
+/* Post title styling - keep red but ensure not too big */
+article h3,
+article.mt-6 h3 {
+  font-size: 1.25rem !important;
+  margin: 0 !important;
+}
+
+/* Post meta (date, reading time) */
+article .text-sm.text-neutral-500,
+article.mt-6 .text-sm {
+  margin-top: 0.25rem !important;
+}
+
+/* Last section before footer - add margin */
+main > section:last-of-type {
+  margin-bottom: 2rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Description text spacing (the "Building in public..." text) */
+main > section.prose,
+section.prose.mt-0 {
+  margin-bottom: 0.5rem !important;
+}
+
+/* ===== INDIVIDUAL POST PAGE ===== */
+/* Post header (title, date) - left align and widen */
+article > header.max-w-prose {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+/* Post content section - left align the prose container */
+article > section.prose {
+  justify-content: flex-start !important;
+}
+
+/* Post content inner div - left align and widen (60% wider than default 65ch) */
+article > section.prose > div.min-w-0 {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+/* Article footer (prev/next nav) - show and style, left align and widen */
+article > footer.max-w-prose {
+  display: block !important;
+  padding-top: 2rem !important;
+  margin-bottom: 2rem !important; /* Add space between nav and site footer */
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+/* Remove the top border from post navigation (footer has its own) */
+article > footer.max-w-prose > div.pt-8 > hr {
+  display: none !important;
+}
+
+/* Single post page - remove h-screen to allow natural height */
+body:has(.single-post-page) {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Single post page - override the h-screen class */
+body.h-screen:has(.single-post-page) {
+  height: auto !important;
+}
+
+/* Single post page - prevent flex grow from pushing footer down */
+body:has(.single-post-page) > div,
+body:has(.single-post-page) > div.relative,
+body:has(.single-post-page) > div.grow,
+body:has(.single-post-page) > div.flex,
+body:has(.single-post-page) main,
+body:has(.single-post-page) main.grow,
+.single-post-page {
+  flex-grow: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Force the wrapper div to not fill viewport */
+body:has(.single-post-page) > div.relative.flex.grow.flex-col {
+  flex-grow: 0 !important;
+  flex: none !important;
+  height: auto !important;
+}
+
+/* Back to top button - move further right */
+#to-top {
+  right: -3rem !important;
+  end: -3rem !important;
+}
+
+a[href="#the-top"] {
+  font-weight: 700 !important;
+}
+
+/* ===== CONTACT / SIMPLE PAGE STYLING ===== */
+/* Space after header/title area */
+main > header {
+  margin-bottom: 2rem !important;
+}
+
+/* The prose section containing the intro text and form */
+main .prose {
+  padding-left: 0 !important;
+}
+
+/* Intro paragraph - align with form */
+main .prose > p:first-of-type {
+  margin-bottom: 2rem !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Form container - align with intro text */
+form {
+  max-width: 36rem !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.form-group {
+  margin-bottom: 1.25rem !important;
+}
+
+.form-group label {
+  font-size: 0.95rem !important;
+  margin-bottom: 0.4rem !important;
+  display: block !important;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+}
+
+.form-group textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+/* Submit button spacing */
+form button[type="submit"],
+form .btn-primary {
+  margin-top: 0.5rem !important;
+}
+
+/* Remove ALL hrs on simple/contact pages */
+article hr,
+article .prose hr,
+section.prose hr,
+main hr,
+.prose hr {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove article footer ONLY on simple/contact pages (not post pages) */
+/* Simple pages use layout="simple" which doesn't have .max-w-prose on footer */
+article > footer.pt-8:not(.max-w-prose) {
+  display: none !important;
+}
+
+/* Ensure no stray borders from prose */
+article section.prose {
+  border-bottom: none !important;
+}
+
+/* The bar might be prose's --tw-prose-hr variable */
+.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  display: none !important;
+}
+
+/* ===== AUDIO PLAYER ===== */
+/* Styled for Oznog dark theme */
+article .prose .article-audio:first-child {
+  margin-top: 0.25rem !important;
+}
+
+.article-audio {
+  background-color: var(--oznog-bg-secondary);
+  padding: 1rem 1.25rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem !important;
+  border-radius: 4px;
+  border: 1px solid var(--oznog-bg-tertiary);
+}
+
+.article-audio + h2 {
+  margin-top: 1rem !important;
+}
+
+.article-audio .audio-label {
+  font-size: 0.9rem;
+  color: var(--oznog-text-secondary);
+  margin-bottom: 0.5rem !important;
+  margin-top: 0 !important;
+}
+
+.article-audio audio {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Style the audio element for dark theme */
+.article-audio audio::-webkit-media-controls-panel {
+  background-color: var(--oznog-bg-tertiary);
+}
+
+.article-audio .speed-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article-audio .speed-label {
+  font-size: 0.8rem;
+  color: var(--oznog-text-secondary);
+}
+
+.article-audio .speed-btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--oznog-bg-tertiary);
+  background: transparent;
+  color: var(--oznog-text-secondary);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.article-audio .speed-btn:hover,
+.article-audio .speed-btn.active {
+  background: var(--oznog-accent);
+  color: var(--oznog-text-primary);
+  border-color: var(--oznog-accent);
+}
+
+.article-audio .audio-download {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--oznog-text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--oznog-bg-tertiary);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.article-audio .audio-download:hover {
+  color: var(--oznog-text-primary);
+  background-color: var(--oznog-accent);
+  border-color: var(--oznog-accent);
+}
+
+/* ===== LOGO ANIMATIONS ===== */
+/* Animation 1: Fade in + scale on page load */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation 2: Subtle ambient glow pulse (continuous) */
+@keyframes logoPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(162, 47, 46, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(162, 47, 46, 0.6));
+  }
+}
+
+/* Apply to header logo */
+.logo img,
+header .site-logo img,
+.site-name img,
+header a[href="/"] img,
+nav a[href="/"] img {
+  filter: drop-shadow(0 0 0px rgba(162, 47, 46, 0));
+  animation: logoFadeIn 0.6s ease-out forwards, logoPulse 5s ease-in-out 0.6s infinite;
+}
+
+/* ===== TALLY FORM EMBED ===== */
+/* Container for the form page - remove left indent from prose */
+article:has(iframe[data-tally-src]) .prose,
+article:has(iframe[data-tally-src]) .prose > *,
+article:has(iframe[data-tally-src]) section.prose,
+article:has(iframe[data-tally-src]) section.prose > div {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* The form intro text paragraphs */
+article:has(iframe[data-tally-src]) p {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+iframe[data-tally-src],
+iframe[title*="Oznog"] {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  margin-bottom: 5rem !important;
+  display: block !important;
+}
+
+/* ===== PAGE TITLES (non-homepage) ===== */
+/* Match section title size from front page */
+article > header h1,
+main > header h1,
+.prose h1:first-child {
+  font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
+}
+
+/* Hide hrs above page titles on list/simple pages */
+main > header > hr,
+main > hr:first-child,
+main > hr:nth-child(2),
+article > header > hr,
+header + hr,
+main header ~ hr:first-of-type,
+main > section:first-of-type > hr:first-child {
+  display: none !important;
+}
+
+/* Remove any border-bottom from page content headers (not nav header) */
+main header,
+main > header {
+  border-bottom: none !important;
+}

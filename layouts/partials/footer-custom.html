@@ -1,0 +1,25 @@
+<footer>
+  <div class="footer-content" style="max-width: 48rem; margin: 0 auto; padding: 3rem 2rem;">
+    <div style="margin-bottom: 2rem;">
+      <strong style="color: var(--oznog-text-primary);">Oznog</strong><br>
+      <span style="color: var(--oznog-text-secondary); font-size: 0.875rem;">Sovereign infrastructure for the fifth story.</span>
+    </div>
+
+    <div class="footer-links" style="margin-bottom: 2rem;">
+      {{ range .Site.Menus.footer }}
+        <a href="{{ .URL }}" style="margin-right: 1.5rem; display: inline-block; margin-bottom: 0.5rem;">{{ .Name }}</a>
+      {{ end }}
+    </div>
+
+    <div class="five-tribes" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #222;">
+      <span style="color: var(--oznog-text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">The Five Tribes</span>
+      <div style="margin-top: 0.5rem; color: var(--oznog-text-secondary); font-size: 0.875rem;">
+        Entrepreneurs · Technologists · Consciousness Holders · Storytellers · Digital Intelligence
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem; font-size: 0.75rem; color: var(--oznog-text-secondary);">
+      © {{ now.Year }} Oznog Holdings
+    </div>
+  </div>
+</footer>

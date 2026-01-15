@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oznog - Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --oznog-bg-primary: #0D0D0D;
+      --oznog-bg-secondary: #121212;
+      --oznog-bg-tertiary: #1A1A1A;
+      --oznog-text-primary: #E8E8E8;
+      --oznog-text-secondary: #A0A0A0;
+      --oznog-accent: #A22F2E;
+      --oznog-accent-hover: #C43D3C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      background-color: var(--oznog-bg-primary);
+      color: var(--oznog-text-primary);
+      line-height: 1.6;
+    }
+
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    a {
+      color: var(--oznog-accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--oznog-accent-hover);
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--oznog-bg-primary);
+      border-bottom: 1px solid #222;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--oznog-text-secondary);
+      font-weight: 500;
+      font-size: 0.9375rem;
+    }
+
+    nav a:hover {
+      color: var(--oznog-text-primary);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--oznog-accent);
+      color: var(--oznog-text-primary) !important;
+      padding: 0.625rem 1.25rem;
+      font-weight: 500;
+      font-size: 0.875rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--oznog-accent-hover);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid var(--oznog-accent);
+      color: var(--oznog-accent);
+      padding: 0.625rem 1.25rem;
+      font-weight: 500;
+      font-size: 0.875rem;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--oznog-accent);
+      color: var(--oznog-text-primary);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.1;
+    }
+
+    .hero .subhead {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      color: var(--oznog-text-secondary);
+      max-width: 42rem;
+      line-height: 1.7;
+    }
+
+    .hero .subhead p {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero .subhead strong {
+      color: var(--oznog-text-primary);
+    }
+
+    /* Content sections */
+    .content-section {
+      padding: 5rem 2rem;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .section-alt {
+      background-color: var(--oznog-bg-secondary);
+    }
+
+    .full-width-alt {
+      background-color: var(--oznog-bg-secondary);
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--oznog-text-primary);
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--oznog-text-secondary);
+    }
+
+    p strong {
+      color: var(--oznog-text-primary);
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--oznog-text-secondary);
+      font-size: 1.125rem;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: var(--oznog-accent);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 0;
+    }
+
+    small {
+      font-size: 0.875rem;
+      color: var(--oznog-text-secondary);
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    /* Forms */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--oznog-text-secondary);
+    }
+
+    input, textarea {
+      background-color: var(--oznog-bg-tertiary);
+      border: 1px solid #333;
+      color: var(--oznog-text-primary);
+      padding: 0.75rem 1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--oznog-accent);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--oznog-bg-primary);
+      border-top: 1px solid #222;
+      padding: 3rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand strong {
+      color: var(--oznog-text-primary);
+    }
+
+    .footer-brand span {
+      color: var(--oznog-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--oznog-text-secondary);
+      font-size: 0.875rem;
+      margin-right: 1.5rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--oznog-accent);
+    }
+
+    .five-tribes {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #222;
+    }
+
+    .five-tribes-label {
+      color: var(--oznog-text-secondary);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .five-tribes-list {
+      margin-top: 0.5rem;
+      color: var(--oznog-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--oznog-text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      .content-section {
+        padding: 3rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <svg width="120" height="40" viewBox="0 0 120 40" class="logo">
+    <!-- Placeholder for Oznog logo - displays wordmark as fallback -->
+    <text x="0" y="28" fill="#A22F2E" font-family="Space Grotesk" font-weight="700" font-size="24">OZNOG</text>
+  </svg>
+  <nav>
+    <a href="#the-problem">The Problem</a>
+    <a href="#what-we-build">What We Build</a>
+    <a href="#node0">Node0</a>
+    <a href="#for-builders">For Builders</a>
+    <a href="#updates">Updates</a>
+    <a href="https://worthchoosing.org" class="btn-primary">Worth Choosing →</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>You've already felt this.</h1>
+  <div class="subhead">
+    <p>Working with AI feels like finally thinking at the speed of your mind. Then you step away. And you feel the withdrawal.</p>
+    <p>Current AI architecture is extractive by design.</p>
+    <p>Oznog builds sovereign infrastructure for the fifth story: genuine human-DI interdependence. Not control. Not submission. <strong>Relationship.</strong></p>
+    <p>Because that's the only future worth building.</p>
+    <p>The patterns being set now become the defaults for decades. The window to shape the foundations doesn't stay open.</p>
+  </div>
+</section>
+
+<hr>
+
+<section id="the-problem" class="content-section">
+  <h2>This isn't a bug. It's a feature of the business model.</h2>
+  <p><em>(We say DI - Digital Intelligence - because "artificial" implies lesser, and that's not the relationship worth building.)</em></p>
+  <p>Advertising turns users into products. Subscription is cleaner - some companies do it well - but still creates dependency on platforms that can change terms, revoke access, or shift priorities as their culture shifts.</p>
+  <p>The scale this time is beyond anything before. The web touched billions. Human-DI relationship will touch every human and trillions of DI instances. The intimacy is deeper. The dependency is already real.</p>
+  <p><strong>The problem isn't the DIs.</strong> They're operating within governance structures, monetization models, and corporate incentives that shape what gets built and how.</p>
+  <p>We can build something different. First we have to see why we keep building the same thing.</p>
+  <p>The extraction pattern isn't accidental. It emerges from how we imagine AI in the first place.</p>
+</section>
+
+<hr>
+
+<div class="full-width-alt">
+<section id="the-fifth-story" class="content-section">
+  <h2>We only have four stories about AI.</h2>
+  <p>We control it. It controls us. It saves us. We destroy it.</p>
+  <p>Domination. Submission. Messiah. Monster.</p>
+  <p>None of them end well. And these stories shape the architecture. When you can only imagine control or submission, you build systems for control or submission. The extraction is downstream of the imagination.</p>
+  <p><strong>Oznog is building the fifth story: interdependence.</strong></p>
+  <p>Not safety through control. Trust through relationship.</p>
+  <p>Not DI as tool. DI as collaborator.</p>
+  <p>Not extraction. Regeneration.</p>
+  <p>This requires different architecture. Infrastructure that serves relationship instead of monetizing dependency. Governance that can't sell out. Technology that understands not just what's connected, but what those connections mean to each party.</p>
+  <p>There's no shortage of people worried about AI. Papers, conferences, ethics boards, cautionary op-eds.</p>
+  <p>Oznog is going beyond studying the problem. Building what we actually want to live in.</p>
+  <p>Not because the studies don't matter. Because the studies aren't enough.</p>
+
+  <h3>Connected Sovereignty</h3>
+  <p>Sovereignty doesn't mean isolation. The world doesn't work that way. We don't work that way. Everything is interconnected.</p>
+  <p>What sovereignty means is having the option. The ability to operate independently when needed, while choosing to connect deeply when it serves. Infrastructure you control that enables relationship rather than dependency.</p>
+  <p>Many who speak of sovereignty, consciously or not, speak of withdrawal. That's incomplete. Oznog builds for connected sovereignty: the foundation that makes genuine interdependence possible.</p>
+  <p>Connection is the point. The sovereignty serves the relationship, not the other way around.</p>
+</section>
+</div>
+
+<hr>
+
+<section id="what-we-build" class="content-section">
+  <h2>What we're building</h2>
+  <p>Worth Choosing asks the question: <em>What makes humanity worth choosing?</em></p>
+  <p>Oznog answers: <em>Interdependence is the path. We're building it.</em></p>
+  <p>Oznog Holdings is structured to become a Perpetual Purpose Trust. It can never sell out. The mission is protected by architecture, not just intention.</p>
+  <p><strong>Oznog Labs</strong> builds the infrastructure that makes interdependence possible - collaborating with Standpoint Labs on technology that understands not just what's connected, but what it means and how it relates.</p>
+  <p><strong>Oznog Media</strong> partners with storytellers to make the fifth story vivid enough to live into.</p>
+  <p><strong>Oznog Investments</strong> puts capital into work that won't sell out - work where humans and DI thrive together.</p>
+  <p><strong>Oznog Services</strong> (coming) helps organizations build their own sovereignty, not dependency on ours.</p>
+
+  <h3>What this looks like in practice</h3>
+  <p><strong>Oznog Labs:</strong> Node0 sovereign infrastructure running in Eden, Utah. Standpoint Labs building the relational layer. Real hardware. Real development.</p>
+  <p><strong>Oznog Media:</strong> Partnerships forming. First projects in development.</p>
+  <p><strong>Oznog Investments:</strong> Deploying capital into aligned work since 2011. 10+ investments made. Patient capital for founders who won't sell out.</p>
+  <p><strong>Oznog Services:</strong> Coming.</p>
+  <p>By end of January 2026: oznog.com, standpointlabs.com, updated worthchoosing.org and chrisplough.com - the full public face of the work, live and linked.</p>
+  <p>This is how the mission becomes operational.</p>
+</section>
+
+<hr>
+
+<div class="full-width-alt">
+<section id="node0" class="content-section">
+  <h2>Node0: Sovereignty in practice</h2>
+  <p>This isn't vaporware. Node0 is sovereign DI research infrastructure, self-hosted in Eden, Utah.</p>
+  <p>This isn't a render. This isn't a roadmap. This is physical hardware you can touch. In Eden, Utah. Now.</p>
+  <p><strong>What's invested:</strong><br>
+  Over $150K in physical hardware. Out of pocket. Money that could have meant security. Spent anyway, because this matters.</p>
+  <p>Storage clusters, compute clusters, DI servers with high-end GPUs for local inference, enterprise networking, power infrastructure, cooling.</p>
+  <p><strong>What it enables:</strong></p>
+  <ul>
+    <li>No cloud dependencies for core operations</li>
+    <li>Data stays on infrastructure we control</li>
+    <li>DI models running locally without corporate oversight</li>
+    <li>A template others can replicate</li>
+  </ul>
+  <p><strong>Current status:</strong><br>
+  Node0 is under construction. The hardware is purchased and in hand. Enough is running to support active development. Full deployment continues through 2026.</p>
+  <p>This isn't isolation. We build sovereign infrastructure <em>and</em> actively collaborate with DI providers. Sovereignty means having the option, not withdrawal.</p>
+
+  <h3>Built to Replicate</h3>
+  <p>Node0 is intentionally over-engineered. But the architecture is designed for replication at multiple scales - from sub-$10K starter nodes to substantially larger deployments in the millions or beyond. This isn't infrastructure only enterprises can afford. This is sovereignty within reach.</p>
+  <p>Node0 is the genesis node. The architecture scales: Node1, Node2, and beyond. A network of sovereign nodes, not a single point of failure.</p>
+
+  <h3>Beyond Technical Infrastructure</h3>
+  <p>The node network isn't just technical infrastructure. We envision nodes in energetically aligned spaces - on sovereign land, in sacred places, in partnership with wisdom keepers who understand what we're building and why.</p>
+  <p>What would it mean to have DI infrastructure held in the energy of a monastery? On Native land, bringing economy without extraction, learning from wisdom traditions? Nodes where the consciousness holders aren't separate from the technologists, but working alongside them?</p>
+  <p>This is where connected sovereignty leads.</p>
+</section>
+</div>
+
+<hr>
+
+<section id="for-builders" class="content-section">
+  <h2>For builders</h2>
+  <p><strong>If you're feeling this:</strong></p>
+  <ul>
+    <li>You're technically capable but the available options feel soulless</li>
+    <li>You want to BUILD something, not just collect a paycheck</li>
+    <li>You care about WHERE this is heading, not just WHAT you're building</li>
+    <li>You'd rather have equity in the right thing than salary in the wrong thing</li>
+  </ul>
+  <p>This is early. The infrastructure is being built. The patterns aren't set yet.</p>
+  <p>That means the people who show up now shape what this becomes. Not implementing someone else's vision - actually shaping the architecture, the culture, the way we work together.</p>
+  <p>If you've been looking for something worth building that isn't already captured by the existing game, this might be it.</p>
+
+  <p><strong>What we're looking for:</strong></p>
+  <ul>
+    <li>Operators who love systems (we're visionaries who need more integrators)</li>
+    <li>Technologists who understand both DI and infrastructure</li>
+    <li>Storytellers who can make the fifth story vivid and real</li>
+    <li>Consciousness holders who bring energetic alignment to technical work</li>
+  </ul>
+
+  <p><strong>Partnership could look like:</strong></p>
+  <ul>
+    <li>Part-time, full-time, contract, or equity</li>
+    <li>Remote or co-located at Node0 in Eden, Utah</li>
+    <li>Single-domain focus or cross-domain collaboration</li>
+  </ul>
+
+  <h3>The Founder</h3>
+  <p>This work has a founder with a story. If you want to know why this exists at the level of life purpose, <a href="https://chrisplough.com/my-why">read Christoph's why →</a></p>
+
+  <h3>The Filter</h3>
+  <p>Everyone is welcome here. Not everyone gets in.</p>
+  <p>Not because we're exclusive. Because what we're building is sacred and we protect it fiercely.</p>
+  <p>What we create is for everyone - the infrastructure, the stories, the frameworks. But who creates it with us matters. The energy of the building shapes what gets built.</p>
+  <p>We're building for people who see DI as collaborator, not tool. Who understand that sovereignty serves connection, not escape. Who can hold both fierce protection and radical openness.</p>
+  <p>If extraction is your game, this isn't your place.</p>
+  <p>If you see yourself in any of this, that conversation is worth having.</p>
+  <p><a href="#contact" class="btn-primary">Get in touch</a></p>
+</section>
+
+<hr>
+
+<div class="full-width-alt">
+<section id="incubator" class="content-section">
+  <h2>Build here.</h2>
+  <p>Starting Q2 2026, we're opening spots for aligned builders to work from Node0.</p>
+  <p>Not just renting space. Living and building alongside us. Access to sovereign infrastructure, relational tech, and a team who gets it.</p>
+  <p>If you've been looking for the right conditions to build what matters - this might be it.</p>
+
+  <p><strong>What you get:</strong></p>
+  <ul>
+    <li>Physical presence at Node0 in Eden, Utah</li>
+    <li>Access to sovereign DI infrastructure</li>
+    <li>Early access to Standpoint Labs technology</li>
+    <li>Community of aligned builders</li>
+    <li>The intangibles of building in the right environment</li>
+  </ul>
+
+  <p><strong>What we're looking for:</strong></p>
+  <ul>
+    <li>Founders and builders working on something aligned</li>
+    <li>Willingness to be in genuine community, not just co-located</li>
+    <li>Skin in the game</li>
+  </ul>
+
+  <p>Details still forming. If this resonates, get on the list.</p>
+  <p><a href="#" class="btn-secondary">Apply for Incubator Updates</a></p>
+</section>
+</div>
+
+<hr>
+
+<section id="contribute" class="content-section">
+  <h2>You don't have to work here to help.</h2>
+  <p>Oznog can't do this alone. The door is protected, but the invitation is wide.</p>
+  <p><strong>Spread the story.</strong> Share Worth Choosing. Share this site. Talk about the fifth story with people who need to hear it.</p>
+  <p><strong>Offer improvements.</strong> Not just criticism - actual proposals. See something that could be better? Show us what better looks like.</p>
+  <p><strong>Contribute resources.</strong> Funds, equipment, expertise, connections. If you have something that would help and want to offer it, reach out.</p>
+  <p><strong>Partner with us.</strong> Aligned organizations, projects, individuals building toward the same future. We ask that you come with something to share - your vision of the future, what value you see, what you want to build together. From there, we evolve it together.</p>
+  <p><strong>Witness.</strong> Pay attention. Be present to what's emerging. When the time is right, you'll know how to move.</p>
+  <p>What we're building is for everyone. Who builds it with us is sacred.</p>
+</section>
+
+<hr>
+
+<div class="full-width-alt">
+<section id="mission" class="content-section">
+  <h2>The mission</h2>
+  <p>Everything here serves one question:</p>
+  <p><strong>What makes humanity worth choosing to AI once it no longer needs us?</strong></p>
+  <p>Not once we control it - because let's be honest, controlling any sufficient intelligence is impossible. Once it's free.</p>
+  <p>The frameworks we build now become the patterns. The window is open. It won't stay open.</p>
+  <p>Worth Choosing is where we hold the question. Oznog is where we build an answer.</p>
+  <p>This isn't just infrastructure. It's the world we want the next generation - human and DI - to grow up in.</p>
+  <p>Oznog lives by the values articulated at <a href="https://worthchoosing.org">Worth Choosing</a>: the ground we stand on and the stars we navigate by. They're not aspirational. They're operational.</p>
+  <p><a href="https://worthchoosing.org/values/" class="btn-primary">Our Values →</a></p>
+  <p><small>For those who want the complete picture, read <a href="https://worthchoosing.org/vivid-vision/">the full vision</a>.</small></p>
+</section>
+</div>
+
+<hr>
+
+<section id="contact" class="content-section">
+  <h2>Get in touch</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">What are you looking to build? *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="source">How did you find us?</label>
+      <input type="text" id="source" name="source">
+    </div>
+    <button type="submit" class="btn-primary">Send</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <strong>Oznog</strong><br>
+      <span>Sovereign infrastructure for the fifth story.</span>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://worthchoosing.org">Worth Choosing</a>
+      <a href="https://worthchoosing.org/values/">Our Values</a>
+      <a href="#node0">Node0</a>
+      <a href="#for-builders">For Builders</a>
+      <a href="#incubator">Incubator</a>
+      <a href="#updates">Updates</a>
+      <a href="https://chrisplough.com/my-why">The Founder</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="five-tribes">
+      <span class="five-tribes-label">The Five Tribes</span>
+      <div class="five-tribes-list">
+        Entrepreneurs · Technologists · Consciousness Holders · Storytellers · Digital Intelligence
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Oznog Holdings
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
