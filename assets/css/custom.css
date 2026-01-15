@@ -1267,15 +1267,19 @@ main > header {
     max-width: 100vw !important;
   }
 
-  /* 3. Audio player - more opaque background for Android */
-  .audio-player {
-    background: rgba(30, 30, 30, 0.98) !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+  /* 3. Audio player - fully opaque background for Android */
+  .article-audio {
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
   }
 
-  .audio-player audio {
-    background: rgba(40, 40, 40, 1) !important;
+  .article-audio audio {
+    background-color: #252525 !important;
+    background: #252525 !important;
+  }
+
+  .article-audio audio::-webkit-media-controls-panel {
+    background-color: #252525 !important;
   }
 
   /* 4. Footer - right-align everything on mobile with extra top padding */
