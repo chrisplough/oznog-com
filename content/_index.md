@@ -116,8 +116,6 @@ Oznog answers: *Interdependence is the path. We're building it.*
 
 **Oznog Services:** Coming.
 
-By end of January 2026: oznog.com, standpointlabs.com, updated worthchoosing.org and chrisplough.com - the full public face of the work, live and linked.
-
 This is how the mission becomes operational.
 
 {{< /section >}}
