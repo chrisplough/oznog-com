@@ -1141,3 +1141,64 @@ main > header {
   max-width: none !important;
   width: 100% !important;
 }
+
+/* ===== MOBILE-SPECIFIC FIXES ===== */
+@media (max-width: 768px) {
+
+  /* 1. Reduce space between date/read time and post content */
+  article header {
+    margin-bottom: 1rem !important;
+  }
+
+  article .prose {
+    margin-top: 0 !important;
+  }
+
+  /* Target the gap after article metadata */
+  article header + *,
+  article header + .prose,
+  article header + div {
+    margin-top: 1rem !important;
+  }
+
+  /* 2. Hero title - force text wrap on mobile */
+  .hero h1,
+  section.hero h1,
+  h1 {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    font-size: 2rem !important;
+  }
+
+  /* 3. Audio player - more opaque background for Android */
+  .audio-player {
+    background: rgba(30, 30, 30, 0.98) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .audio-player audio {
+    background: rgba(40, 40, 40, 1) !important;
+  }
+
+  /* 4. Footer navigation - center align on mobile */
+  footer nav,
+  footer nav ul {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  footer nav li,
+  footer nav a {
+    text-align: center !important;
+  }
+
+  /* Footer copyright - center on mobile */
+  footer .text-sm,
+  footer p,
+  footer div:last-child {
+    text-align: center !important;
+  }
+}
