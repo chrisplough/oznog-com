@@ -1,6 +1,7 @@
 /* Oznog Custom Styles */
 /* Dark, gritty, grounded - rock n' roll DNA with a huge beating heart */
 /* AGGRESSIVE OVERRIDES to force dark theme over Congo defaults */
+/* Updated: 2026-01-15 - Mobile hero text wrapping fix */
 
 /* ===== Typography ===== */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
@@ -275,9 +276,11 @@ nav img {
 .hero h1,
 .home section:first-of-type h1 {
   color: var(--oznog-text-primary) !important;
-  font-size: clamp(2.75rem, 5vw, 3.75rem) !important; /* Sized to fit on one line */
-  white-space: nowrap !important; /* Keep on one line */
+  font-size: clamp(2.25rem, 6vw, 3.75rem) !important; /* Responsive font size */
   max-width: 100% !important;
+  white-space: normal !important; /* Allow wrapping */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 .subhead,
@@ -1143,33 +1146,125 @@ main > header {
 }
 
 /* ===== MOBILE-SPECIFIC FIXES ===== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   /* 1. Reduce space between date/read time and post content */
+  /* The gap comes from mb-10 on the date/meta div inside header */
   article header {
     margin-bottom: 1rem !important;
+    padding-bottom: 0 !important;
   }
 
-  article .prose {
+  /* Target the h1 margin-bottom */
+  article header h1 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Target the date/meta div (has mb-10 class = 2.5rem) */
+  article header > div,
+  article header .text-base,
+  article header div.mb-10 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  article .prose,
+  article > .prose,
+  article section.prose {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Target the section that follows header */
+  article header + section,
+  article header + section.prose {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* ====== LIST PAGES (like /updates/) ====== */
+  /* Target the header containing the page title */
+  main > header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* The prose section containing description */
+  main > header + section.prose,
+  main > section.prose:first-of-type,
+  main > section.prose {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Target inner div of prose section */
+  main > section.prose > div,
+  section.prose > div {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Paragraphs inside prose */
+  main > section.prose p,
+  section.prose p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* The section containing articles (comes after prose) */
+  main > section.prose + section,
+  main > section:nth-of-type(2),
+  main > section:not(.prose) {
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
+  }
+
+  /* Year headings on list pages - they have mt-12 (3rem) and first:mt-8 */
+  main section > h2,
+  main > section > h2,
+  main section h2.mt-12,
+  section > h2.mt-12,
+  h2.mt-12 {
     margin-top: 0 !important;
   }
 
-  /* Target the gap after article metadata */
-  article header + *,
-  article header + .prose,
-  article header + div {
-    margin-top: 1rem !important;
+  /* First year heading - no extra margin since section has padding */
+  main > section > h2:first-child,
+  main section > h2:first-child,
+  section > h2:first-child,
+  section > h2:first-of-type {
+    margin-top: 0 !important;
   }
 
   /* 2. Hero title - force text wrap on mobile */
+  /* Be extremely specific and aggressive */
   .hero h1,
   section.hero h1,
+  .section.hero h1,
+  main h1,
+  #main-content h1,
+  article h1,
+  h1.text-4xl,
+  h1.text-5xl,
+  h1.text-6xl,
   h1 {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
+    word-break: break-word !important;
     hyphens: auto !important;
+    -webkit-hyphens: auto !important;
     max-width: 100% !important;
-    font-size: 2rem !important;
+    width: 100% !important;
+    font-size: 2.4rem !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+  }
+
+  /* Prevent any horizontal overflow */
+  body, html, main, article, section, .hero, .prose {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
   }
 
   /* 3. Audio player - more opaque background for Android */
@@ -1183,22 +1278,41 @@ main > header {
     background: rgba(40, 40, 40, 1) !important;
   }
 
-  /* 4. Footer navigation - center align on mobile */
-  footer nav,
+  /* 4. Footer - right-align everything on mobile with extra top padding */
+  footer {
+    text-align: right !important;
+    padding-top: 1rem !important;
+  }
+
+  /* Keep Congo's text-end (right-align) on footer list items with margin from edge */
   footer nav ul {
-    text-align: center !important;
-    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    padding-top: 1rem !important;
   }
 
-  footer nav li,
-  footer nav a {
-    text-align: center !important;
+  footer nav ul li {
+    text-align: right !important;
+    margin-bottom: 0.5rem !important;
+    margin-right: 1rem !important;
   }
 
-  /* Footer copyright - center on mobile */
-  footer .text-sm,
-  footer p,
-  footer div:last-child {
-    text-align: center !important;
+  footer nav ul li:first-child {
+    padding-top: 0 !important;
+  }
+
+  /* Override Congo's justify-between on copyright row - stack and right-align */
+  footer > .flex.items-center.justify-between,
+  footer > div.flex {
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+
+  footer p {
+    text-align: right !important;
   }
 }
