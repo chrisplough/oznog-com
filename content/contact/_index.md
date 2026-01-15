@@ -6,7 +6,7 @@ layout: "simple"
 
 If something here resonated, we want to hear from you.
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="contact" />
   <p class="hidden" style="display:none;">
     <label>Don't fill this out: <input name="bot-field" /></label>
