@@ -4,7 +4,7 @@ description: "Thank you for reaching out"
 layout: "simple"
 ---
 
-<div class="thank-you-content" style="text-align: left; margin-bottom: 5rem;">
+<div class="thank-you-content" style="text-align: left; margin-bottom: 3rem;">
 
 We received your message and will be in touch :)
 
