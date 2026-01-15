@@ -926,6 +926,11 @@ form .btn-primary {
   margin-top: 0.5rem !important;
 }
 
+/* Space below form before footer */
+form {
+  margin-bottom: 5rem !important;
+}
+
 /* Remove ALL hrs on simple/contact pages */
 article hr,
 article .prose hr,
