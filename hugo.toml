@@ -1,4 +1,4 @@
-baseURL = "https://oznog.com/"
+baseURL = "/"
 relativeURLs = true
 languageCode = "en-us"
 title = "Oznog"
