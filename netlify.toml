@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "rm -rf themes/congo && git clone https://github.com/jpanther/congo.git themes/congo && cp -r layouts/shortcodes/* themes/congo/layouts/_shortcodes/ && hugo --gc --minify"
+  command = "rm -rf themes/congo && git clone https://github.com/jpanther/congo.git themes/congo && ln -s _partials themes/congo/layouts/partials && ln -s _shortcodes themes/congo/layouts/shortcodes && cp -r layouts/shortcodes/* themes/congo/layouts/_shortcodes/ && hugo --gc --minify"
 
 [build.environment]
   HUGO_VERSION = "0.121.0"
