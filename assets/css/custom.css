@@ -1063,12 +1063,15 @@ article .prose .article-audio:first-child {
   }
 }
 
-/* Apply to header logo */
+/* Apply to header logo - target Congo's logo structure */
 .logo img,
 header .site-logo img,
 .site-name img,
 header a[href="/"] img,
-nav a[href="/"] img {
+nav a[href="/"] img,
+header nav a img,
+header > nav img,
+header div a img {
   filter: drop-shadow(0 0 0px rgba(162, 47, 46, 0));
   animation: logoFadeIn 0.6s ease-out forwards, logoPulse 5s ease-in-out 0.6s infinite;
 }
