@@ -98,7 +98,7 @@ Oznog answers: *Interdependence is the path. We're building it.*
 
 **Oznog Holdings** is structured to become a Perpetual Purpose Trust. It can never sell out. The mission is protected by architecture, not just intention.
 
-**Oznog Labs** builds the infrastructure that makes interdependence possible - collaborating with [Standpoint Labs](https://standpointlabs.com) on technology that understands not just what's connected, but what it means and how it relates.
+**Oznog Labs** builds the infrastructure that makes interdependence possible - collaborating with <a href="https://standpointlabs.com" target="_blank" rel="noopener">Standpoint Labs</a> on technology that understands not just what's connected, but what it means and how it relates.
 
 **Oznog Media** partners with storytellers to make the fifth story vivid enough to live into.
 
@@ -197,7 +197,7 @@ If you've been looking for something worth building that isn't already captured 
 
 ### The Founder
 
-This work has a founder with a story. If you want to know why this exists at the level of life purpose, [read Christoph's why →](https://chrisplough.com/my-why)
+This work has a founder with a story. If you want to know why this exists at the level of life purpose, <a href="https://chrisplough.com/my-why" target="_blank" rel="noopener">read Christoph's why →</a>
 
 ### The Filter
 
@@ -289,7 +289,7 @@ Worth Choosing is where we hold the question. Oznog is where we build an answer.
 
 This isn't just infrastructure. It's the world we want the next generation - human and DI - to grow up in.
 
-Oznog lives by the values articulated at [Worth Choosing](https://worthchoosing.org): the ground we stand on and the stars we navigate by. They're not aspirational. They're operational.
+Oznog lives by the values articulated at <a href="https://worthchoosing.org" target="_blank" rel="noopener">Worth Choosing</a>: the ground we stand on and the stars we navigate by. They're not aspirational. They're operational.
 
 <a href="https://worthchoosing.org/values/" class="btn-primary" target="_blank">Our Values →</a>
 

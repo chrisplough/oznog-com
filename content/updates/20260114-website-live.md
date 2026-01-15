@@ -9,7 +9,7 @@ draft: false
 
 Oznog.com is now live.
 
-The public face of the work begins. This site, [worthchoosing.org](https://worthchoosing.org), [chrisplough.com](https://chrisplough.com), and soon [standpointlabs.com](https://standpointlabs.com) - the full ecosystem, linked and live.
+The public face of the work begins. This site, <a href="https://worthchoosing.org" target="_blank" rel="noopener">worthchoosing.org</a>, <a href="https://chrisplough.com" target="_blank" rel="noopener">chrisplough.com</a>, and soon <a href="https://standpointlabs.com" target="_blank" rel="noopener">standpointlabs.com</a> - the full ecosystem, linked and live.
 
 This is how the mission becomes operational.
 

@@ -9,6 +9,6 @@ We're committing to building in public. This updates section will track progress
 
 Not polished announcements. Real updates from the build.
 
-The detailed thinking lives at [Worth Choosing](https://worthchoosing.org). The personal story at [chrisplough.com](https://chrisplough.com).
+The detailed thinking lives at <a href="https://worthchoosing.org" target="_blank" rel="noopener">Worth Choosing</a>. The personal story at <a href="https://chrisplough.com" target="_blank" rel="noopener">chrisplough.com</a>.
 
 Here, we build.
