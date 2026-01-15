@@ -1129,3 +1129,15 @@ main header,
 main > header {
   border-bottom: none !important;
 }
+
+/* ===== THANK YOU PAGE ===== */
+.thank-you-content {
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
+.thank-you-content p,
+.thank-you-content {
+  max-width: none !important;
+  width: 100% !important;
+}
