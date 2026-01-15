@@ -8,13 +8,6 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Language = ["en"]}
-  force = false
-
 # Handle form submissions
 [dev]
   framework = "#custom"
