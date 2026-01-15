@@ -45,42 +45,6 @@ copyright = "© 2011-2026 [Oznog Holdings LLC](https://oznog.com) · Founded by 
     showComments = false
     sharingLinks = false
 
-[module]
-  # Local shortcodes FIRST (higher priority)
-  [[module.mounts]]
-    source = "layouts/shortcodes"
-    target = "layouts/shortcodes"
-  # Theme shortcodes (lower priority, fills in gaps)
-  [[module.mounts]]
-    source = "themes/congo/layouts/_shortcodes"
-    target = "layouts/shortcodes"
-  # Theme partials mapped to standard location
-  [[module.mounts]]
-    source = "themes/congo/layouts/_partials"
-    target = "layouts/partials"
-  # Standard project folders
-  [[module.mounts]]
-    source = "content"
-    target = "content"
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-  [[module.mounts]]
-    source = "layouts"
-    target = "layouts"
-  [[module.mounts]]
-    source = "data"
-    target = "data"
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
-  [[module.mounts]]
-    source = "i18n"
-    target = "i18n"
-  [[module.mounts]]
-    source = "archetypes"
-    target = "archetypes"
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
