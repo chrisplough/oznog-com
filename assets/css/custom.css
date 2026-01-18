@@ -1503,16 +1503,21 @@ ul.mt-8.flex-row li span,
   border: 1px solid var(--oznog-accent) !important;
 }
 
-/* Arrow links - keep clean */
+/* Arrow links (prev/next) - style both consistently as buttons */
+ul.mt-8.flex-row li:first-child a,
 ul.mt-8.flex-row li:last-child a,
+.pagination li:first-child a,
 .pagination li:last-child a {
-  border: none !important;
+  color: var(--oznog-text-secondary) !important;
   background: transparent !important;
-  color: var(--oznog-accent) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
+ul.mt-8.flex-row li:first-child a:hover,
 ul.mt-8.flex-row li:last-child a:hover,
+.pagination li:first-child a:hover,
 .pagination li:last-child a:hover {
-  color: var(--oznog-accent-hover) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--oznog-text-primary) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--oznog-accent) !important;
 }
