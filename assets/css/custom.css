@@ -235,7 +235,7 @@ body::before {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.08;
+  opacity: 0.07;
   background-image: url('/images/splatter.png');
   background-repeat: repeat;
   background-size: 1600px;
