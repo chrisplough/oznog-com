@@ -140,8 +140,45 @@ main section article:nth-of-type(even) {
   font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 }
 
-code, pre, .mono {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+/* ===== CODE BLOCKS ===== */
+/* Consistent code styling across all ecosystem sites */
+.prose code,
+.prose pre code,
+article code,
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 1.25em;
+}
+
+/* Inline code - smaller than code blocks */
+.prose code:not(pre code),
+article p code,
+article li code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--oznog-text-primary);
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+.prose pre,
+article pre {
+  background-color: #1a1a20;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose pre code,
+article pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: var(--oznog-text-secondary);
+  line-height: 1.6;
 }
 
 /* Force text colors */
@@ -171,8 +208,8 @@ h2 {
   font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
   font-weight: 700 !important;
   line-height: 1.2 !important;
-  margin-bottom: 2rem !important;
-  margin-top: 0 !important;
+  margin-bottom: 1rem !important; /* Closer to following content */
+  margin-top: 0 !important; /* hr provides space above */
 }
 
 h3 {
@@ -578,7 +615,7 @@ footer p a:hover {
 hr {
   border: none !important;
   border-top: 1px solid #333 !important;
-  margin: 0 !important;
+  margin: 3rem 0 1.5rem 0 !important; /* Space above, less below (heading follows) */
   background: transparent !important;
 }
 
@@ -960,18 +997,11 @@ form {
   margin-bottom: 5rem !important;
 }
 
-/* Remove ALL hrs on simple/contact pages */
-article hr,
-article .prose hr,
-section.prose hr,
-main hr,
-.prose hr {
+/* Remove hrs on simple/contact pages ONLY (not blog posts) */
+/* Simple pages have footer without .max-w-prose class */
+article:has(> footer.pt-8:not(.max-w-prose)) hr,
+article:has(> footer.pt-8:not(.max-w-prose)) .prose hr {
   display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 /* Remove article footer ONLY on simple/contact pages (not post pages) */
@@ -983,11 +1013,6 @@ article > footer.pt-8:not(.max-w-prose) {
 /* Ensure no stray borders from prose */
 article section.prose {
   border-bottom: none !important;
-}
-
-/* The bar might be prose's --tw-prose-hr variable */
-.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  display: none !important;
 }
 
 /* ===== AUDIO PLAYER ===== */
@@ -1405,4 +1430,89 @@ main > header {
   footer p {
     text-align: right !important;
   }
+}
+
+/* ===== PAGINATION ===== */
+/* Clean, readable pagination for updates list */
+/* Target Congo's pagination: ul.mt-8.flex.flex-row */
+ul.mt-8.flex-row,
+.pagination {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 1rem !important;
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important;
+  padding: 1rem 0 !important;
+}
+
+ul.mt-8.flex-row li,
+.pagination li {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+/* Remove red squares from pagination */
+ul.mt-8.flex-row li::before,
+.pagination li::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: static !important;
+}
+
+ul.mt-8.flex-row a,
+ul.mt-8.flex-row span,
+.pagination a,
+.pagination span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 2.5rem !important;
+  height: 2.5rem !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Page number links */
+ul.mt-8.flex-row li a,
+.pagination a {
+  color: var(--oznog-text-secondary) !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+ul.mt-8.flex-row li a:hover,
+.pagination a:hover {
+  color: var(--oznog-text-primary) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--oznog-accent) !important;
+}
+
+/* Current page (span, not link) */
+ul.mt-8.flex-row li span,
+.pagination li span {
+  color: var(--oznog-text-primary) !important;
+  background: var(--oznog-accent) !important;
+  border: 1px solid var(--oznog-accent) !important;
+}
+
+/* Arrow links - keep clean */
+ul.mt-8.flex-row li:last-child a,
+.pagination li:last-child a {
+  border: none !important;
+  background: transparent !important;
+  color: var(--oznog-accent) !important;
+}
+
+ul.mt-8.flex-row li:last-child a:hover,
+.pagination li:last-child a:hover {
+  color: var(--oznog-accent-hover) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
