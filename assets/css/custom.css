@@ -650,6 +650,25 @@ html {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Large screens - slight space between nav and hero */
+@media (min-width: 1024px) {
+  .hero,
+  .home section:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
+  }
+}
+
+/* Medium screens (tablets/smaller laptops) - more space between nav and hero */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero,
+  .home section:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 2rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hero,
   section:first-of-type {
