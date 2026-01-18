@@ -14,7 +14,7 @@
   --oznog-text-primary: #E8E8E8;
   --oznog-text-secondary: #A0A0A0;
   --oznog-accent: #A22F2E;
-  --oznog-accent-hover: #C43D3C;
+  --oznog-accent-hover: #D94A49;
 
   /* Override Congo color variables */
   --color-neutral: #0D0D0D;
@@ -224,6 +224,32 @@ nav a {
 header a:hover,
 nav a:hover {
   color: var(--oznog-text-primary) !important;
+}
+
+/* ===== EXTERNAL LINK INDICATORS ===== */
+/* Shows small arrow icon for outbound links */
+
+.prose a[href^="http"]:not([href*="oznog.com"]):not([href*="localhost"])::after,
+article a[href^="http"]:not([href*="oznog.com"]):not([href*="localhost"])::after,
+main a[href^="http"]:not([href*="oznog.com"]):not([href*="localhost"])::after,
+section a[href^="http"]:not([href*="oznog.com"]):not([href*="localhost"])::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.75em;
+  opacity: 0.7;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+/* Don't show indicator on nav links, footer links, or buttons */
+header nav a[href^="http"]::after,
+footer a[href^="http"]::after,
+.btn-primary[href^="http"]::after,
+.btn-secondary[href^="http"]::after,
+a.btn-primary[href^="http"]::after,
+a.btn-secondary[href^="http"]::after {
+  content: none !important;
 }
 
 /* ===== HEADER / NAVIGATION ===== */
@@ -1143,6 +1169,37 @@ main > header {
 .thank-you-content {
   max-width: none !important;
   width: 100% !important;
+}
+
+/* ===== 404 PAGE ===== */
+.four-oh-four {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: left;
+}
+
+.four-oh-four h1 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.four-oh-four .subhead {
+  font-size: 1.25rem;
+  color: var(--oznog-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.four-oh-four p {
+  color: var(--oznog-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.four-oh-four .cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 /* ===== MOBILE-SPECIFIC FIXES ===== */

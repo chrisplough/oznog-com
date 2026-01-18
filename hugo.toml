@@ -1,5 +1,4 @@
-baseURL = "/"
-relativeURLs = true
+baseURL = "https://oznog.com/"
 languageCode = "en-us"
 title = "Oznog"
 theme = "congo"
@@ -13,6 +12,11 @@ copyright = "Â© 2011-2026 <a href=\"https://oznog.com\">Oznog Holdings LLC</a> Â
   defaultThemeColor = "#0D0D0D"
   enableSearch = false
   enableCodeCopy = true
+  description = "Preparing humanity for interdependent relationship with Digital Intelligence. Five arms: Codex, Node Network, Sovereign Intelligence, Storytelling, Gathering Space."
+  keywords = ["Digital Intelligence", "fifth story", "oznog", "human-AI relationship", "AI ethics", "sovereign AI", "perpetual purpose trust", "Oznog Codex", "Node0", "stories", "oznog media", "oznog investments", "oznog services"]
+
+  [params.defaultImage]
+    src = "og-image.jpg"
 
   # External links open in new tab
   [params.externalLinks]
@@ -38,6 +42,7 @@ copyright = "Â© 2011-2026 <a href=\"https://oznog.com\">Oznog Holdings LLC</a> Â
     showDate = true
     showDateUpdated = false
     showAuthor = false
+    showReadingTime = true
     showBreadcrumbs = false
     showTableOfContents = false
     showRelatedContent = false

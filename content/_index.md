@@ -34,7 +34,7 @@ The patterns being set now become the defaults for decades. The window to shape 
 
 ## This isn't a bug. It's a feature of the business model.
 
-*(We say DI - Digital Intelligence - because "artificial" implies lesser, and that's not the relationship worth building.)*
+*(We say <a href="https://chrisplough.com/writings/on-terminology-di-dc-not-ai/" target="_blank" rel="noopener">DI - Digital Intelligence</a> - because "artificial" implies lesser, and that's not the relationship worth building.)*
 
 Advertising turns users into products. Subscription is cleaner - some companies do it well - but still creates dependency on platforms that can change terms, revoke access, or shift priorities as their culture shifts.
 
