@@ -15,6 +15,10 @@ No cloud required. No corporate oversight. No asking permission.
 
 This is what we built.
 
+![Node0 v1 - DI fleet operational](/images/node0-v1-operational.jpg)
+
+*Node0 v1 deployment. The DI fleet running: di01-di04 visible with their color-coded fans, nexus storage at bottom, UPS systems providing protection. This is the initial deployment - two 42U racks with the full hardware buildout are still to come. But this is operational now.*
+
 ---
 
 ## The Fleet

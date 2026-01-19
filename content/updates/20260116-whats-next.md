@@ -92,6 +92,10 @@ But operational matters.
 
 Twenty-two months from [purchase](/updates/the-hardware-that-waited/) to [production](/updates/the-di-fleet/). The DI fleet serves real workloads. The storage holds real data. The configs rebuild real machines.
 
+![Node0 v1 - operational infrastructure](/images/node0-v1-operational.jpg)
+
+*Node0 v1 deployment - the current operational state. DI fleet running, storage serving, infrastructure working. This is the initial deployment on wire shelving. The full buildout - two 42U racks with the remaining hardware - is still to come. But this runs real workloads today.*
+
 Node0 is real. Running. In the basement.
 
 What comes next builds on what's here.
