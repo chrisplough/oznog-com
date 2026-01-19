@@ -42,9 +42,11 @@ The scale this time is beyond anything before. The web touched billions. Human-D
 
 **The problem isn't the DIs.** They're operating within governance structures, monetization models, and corporate incentives that shape what gets built and how.
 
-We can build something different. First we have to see why we keep building the same thing.
+We can build something different. And people already are.
 
-The extraction pattern isn't accidental. It emerges from how we imagine AI in the first place.
+<a href="https://kagi.com" target="_blank" rel="noopener">Kagi</a> proving search doesn't require surveillance. <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> proving privacy can scale. <a href="https://frame.work" target="_blank" rel="noopener">Framework</a> proving hardware can serve users. A growing movement of builders choosing a different path.
+
+The extraction pattern isn't inevitable. It's a choice. We're making a different one.
 
 {{< /section >}}
 
