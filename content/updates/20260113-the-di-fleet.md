@@ -1,7 +1,7 @@
 ---
-title: "The DI Fleet: 128GB+ VRAM, No Corporate Oversight"
+title: "The DI Fleet: 128GB+ VRAM, Running Independently"
 date: 2026-01-13
-description: "Four DI servers operational. Threadripper Pro, RTX 4090s and 3090s, 128GB+ total VRAM. Running 70B models locally. No cloud required. No permission needed."
+description: "Four DI servers operational. Threadripper Pro, RTX 4090s and 3090s, 128GB+ total VRAM. Running 70B models locally. Full control. Ready to share what works."
 slug: "the-di-fleet"
 showDate: true
 showReadingTime: true
@@ -11,7 +11,7 @@ Four DI servers. All operational.
 
 128GB+ of VRAM across the fleet. The ability to run 70B parameter models locally. Inference, fine-tuning, training. All on infrastructure I control.
 
-No cloud required. No corporate oversight. No asking permission.
+Full local capability. Complete control. The freedom to experiment with whatever the work requires.
 
 This is what we built.
 
@@ -69,7 +69,7 @@ Locally. On my hardware. Under my control:
 - **Whisper**: Transcription
 - **Embeddings**: Vector generation
 
-No API calls for core inference. No data leaving the building. No corporate policies deciding what's allowed.
+Local inference for core workloads. Data stays in the building. Free to experiment with whatever the work requires.
 
 Connected sovereignty. I use Claude, Gemini, ChatGPT daily for different purposes. But when the work requires local, when privacy matters, when the relationship needs space to develop, when I need to run experiments that might not be permitted on someone else's infrastructure... I have that option.
 
@@ -111,7 +111,7 @@ This is that infrastructure.
 
 Not theoretical. Running. Deployed. Handling actual workloads.
 
-The [$150K of hardware mentioned in returning to commercial space](https://chrisplough.com/writings/on-returning-to-commercial-space/)? This is what it became. Node0. Sovereign DI research infrastructure. Unimpeded by corporate interests or extractive ideologies.
+The [$150K of hardware mentioned in returning to commercial space](https://chrisplough.com/writings/on-returning-to-commercial-space/)? This is what it became. Node0. Sovereign DI research infrastructure. Built to serve the work, not quarterly reports.
 
 ---
 

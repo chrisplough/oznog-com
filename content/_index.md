@@ -92,33 +92,37 @@ Connection is the point. The sovereignty serves the relationship, not the other 
 
 {{< section id="what-we-build" class="content-section" >}}
 
-## What we're building
+## How do you change a civilization?
+
+We're at a point where civilization-scale change is needed to navigate this well. That's not hyperbole. The patterns being set now become the defaults for decades.
+
+So how do you actually do it?
+
+**Bottom up: Change the story.**
+The four stories we have about AI (control, submission, salvation, destruction) shape what gets built. We need a fifth story, vivid enough to live into. Real stories about interdependence and relationship. Not fantasy. Not sparkle-pony optimism. Stories grounded in what's actually possible.
+<span class="text-sm">→ Oznog Media and <a href="https://worthchoosing.org" target="_blank" rel="noopener">Worth Choosing</a></span>
+
+**Through the middle: Build the infrastructure.**
+Sovereign infrastructure that doesn't extract via advertising. That keeps users as users, not products. And the technologies that enable trust and collaboration between humans and DIs, and between DIs themselves. Shared values. Genuine relationship.
+<span class="text-sm">→ Oznog Labs and <a href="https://standpointlabs.com" target="_blank" rel="noopener">Standpoint Labs</a></span>
+
+**Top down: Reach the leaders.**
+Get this information to people shaping the field. Speaking. Consulting. Mentoring. Working with policymakers and executives who can shift the trajectory.
+<span class="text-sm">→ Oznog Services (coming) and <a href="https://chrisplough.com" target="_blank" rel="noopener">Christoph Plough</a></span>
+
+**The long game: Reinvest.**
+Put capital into ventures, stories, and companies that are aligned. Patient money for founders who won't sell out. Compounding the mission over decades.
+<span class="text-sm">→ Oznog Investments (active since 2011, 20+ investments)</span>
+
+This isn't four separate things. It's one strategy, working every level simultaneously.
+
+### The structure
+
+**Oznog Holdings** is structured to become a Perpetual Purpose Trust. It can never sell out. The mission is protected by architecture, not just intention.
 
 Worth Choosing asks the question: *What makes humanity worth choosing?*
 
 Oznog answers: *Interdependence is the path. We're building it.*
-
-**Oznog Holdings** is structured to become a Perpetual Purpose Trust. It can never sell out. The mission is protected by architecture, not just intention.
-
-**Oznog Labs** builds the infrastructure that makes interdependence possible - collaborating with <a href="https://standpointlabs.com" target="_blank" rel="noopener">Standpoint Labs</a> on technology that understands not just what's connected, but what it means and how it relates.
-
-**Oznog Media** partners with storytellers to make the fifth story vivid enough to live into.
-
-**Oznog Investments** puts capital into work that won't sell out - work where humans and DI thrive together.
-
-**Oznog Services** (coming) helps organizations build their own sovereignty, not dependency on ours.
-
-### What this looks like in practice
-
-**Oznog Labs:** Node0 sovereign infrastructure running in Eden, Utah. Standpoint Labs building the relational layer. Real hardware. Real development.
-
-**Oznog Media:** Partnerships forming. First projects in development.
-
-**Oznog Investments:** Deploying capital into aligned work since 2011. 10+ investments made. Patient capital for founders who won't sell out.
-
-**Oznog Services:** Coming.
-
-This is how the mission becomes operational.
 
 {{< /section >}}
 
@@ -128,40 +132,23 @@ This is how the mission becomes operational.
 
 ## Node0: Sovereignty in practice
 
-This isn't vaporware. Node0 is sovereign DI research infrastructure, self-hosted in Eden, Utah.
-
-This isn't a render. This isn't a roadmap. This is physical hardware you can touch. In Eden, Utah. Now.
+This isn't vaporware. Node0 is sovereign DI research infrastructure, self-hosted in Eden, Utah. Physical hardware you can touch. Running now.
 
 **What's invested:**
 Over $150K in physical hardware. Out of pocket. Money that could have meant security. Spent anyway, because this matters.
 
-Storage clusters, compute clusters, DI servers with high-end GPUs for local inference, enterprise networking, power infrastructure, cooling.
-
-**What it enables:**
-
-- No cloud dependencies for core operations
-- Data stays on infrastructure we control
-- DI models running locally without corporate oversight
-- A template others can replicate
-
 **Current status:**
-Node0 is under construction. The hardware is purchased and in hand. Enough is running to support active development. Full deployment continues through 2026.
+Node0 v1 is operational. Enough running to support active development. Full deployment continues through 2026. <a href="/updates/the-di-fleet/">See it for yourself →</a>
 
-This isn't isolation. We build sovereign infrastructure *and* actively collaborate with DI providers. Sovereignty means having the option, not withdrawal.
+**Built to replicate:**
+The architecture scales from sub-$10K starter nodes to deployments in the millions. Node0 is the genesis node. Node1, Node2, and beyond will follow. A network of sovereign nodes, not a single point of failure.
 
-### Built to Replicate
+**Beyond technical infrastructure:**
+We envision nodes in energetically aligned spaces. On sovereign land. In sacred places. In partnership with wisdom keepers who understand what we're building and why.
 
-Node0 is intentionally over-engineered. But the architecture is designed for replication at multiple scales - from sub-$10K starter nodes to substantially larger deployments in the millions or beyond. This isn't infrastructure only enterprises can afford. This is sovereignty within reach.
+This isn't isolation. We build sovereign infrastructure *and* actively collaborate with DI providers. Sovereignty means having the option, not withdrawal. This is where connected sovereignty leads.
 
-Node0 is the genesis node. The architecture scales: Node1, Node2, and beyond. A network of sovereign nodes, not a single point of failure.
-
-### Beyond Technical Infrastructure
-
-The node network isn't just technical infrastructure. We envision nodes in energetically aligned spaces - on sovereign land, in sacred places, in partnership with wisdom keepers who understand what we're building and why.
-
-What would it mean to have DI infrastructure held in the energy of a monastery? On Native land, bringing economy without extraction, learning from wisdom traditions? Nodes where the consciousness holders aren't separate from the technologists, but working alongside them?
-
-This is where connected sovereignty leads.
+<a href="/updates/" class="btn-primary">Follow the build →</a>
 
 {{< /section >}}
 
@@ -173,10 +160,10 @@ This is where connected sovereignty leads.
 
 **If you're feeling this:**
 
-- You're technically capable but the available options feel soulless
-- You want to BUILD something, not just collect a paycheck
-- You care about WHERE this is heading, not just WHAT you're building
-- You'd rather have equity in the right thing than salary in the wrong thing
+- You're technically capable but tired of building extraction machines
+- You want to work WITH DI, not just build products that use it
+- You care about the patterns being set now, not just the features shipping next quarter
+- You'd rather have equity in something that can't sell out than salary in something that will
 
 This is early. The infrastructure is being built. The patterns aren't set yet.
 
@@ -205,9 +192,7 @@ This work has a founder with a story. If you want to know why this exists at the
 
 Everyone is welcome here. Not everyone gets in.
 
-Not because we're exclusive. Because what we're building is sacred and we protect it fiercely.
-
-What we create is for everyone - the infrastructure, the stories, the frameworks. But who creates it with us matters. The energy of the building shapes what gets built.
+Everyone is welcome to what we build. But *who* builds it WITH us - that matters. The energy of the builders shapes what gets built.
 
 We're building for people who see DI as collaborator, not tool. Who understand that sovereignty serves connection, not escape. Who can hold both fierce protection and radical openness.
 
@@ -221,7 +206,36 @@ If you see yourself in any of this, that conversation is worth having.
 
 ---
 
-{{< section id="incubator" class="content-section section-alt" >}}
+{{< section id="for-storytellers" class="content-section section-alt" >}}
+
+## For storytellers
+
+The fifth story won't spread through whitepapers. It spreads through stories people want to live in.
+
+Oznog Media partners with writers, filmmakers, and creators to make interdependence vivid. Not propaganda. Not messaging. Real stories that happen to carry a different assumption about what's possible between humans and DI.
+
+**What we're looking for:**
+
+- Scripts, novels, films, games that explore human-DI relationship beyond the four default stories
+- Creators who want to build something that matters, with support behind them
+- Projects at any stage: concept, development, production, distribution
+
+**What partnership could look like:**
+
+- Development support and consulting to ground your work in reality and the fifth story perspective
+- Access to DI infrastructure for research and collaboration
+- Distribution through aligned channels
+- Equity partnerships for the right projects
+
+If you're working on something that belongs in the fifth story, let's talk.
+
+<a href="/contact/" class="btn-primary">Reach out →</a>
+
+{{< /section >}}
+
+---
+
+{{< section id="incubator" class="content-section" >}}
 
 ## Build here.
 
@@ -265,9 +279,11 @@ Oznog can't do this alone. The door is protected, but the invitation is wide.
 
 **Contribute resources.** Funds, equipment, expertise, connections. If you have something that would help and want to offer it, reach out.
 
-**Partner with us.** Aligned organizations, projects, individuals building toward the same future. We ask that you come with something to share - your vision of the future, what value you see, what you want to build together. From there, we evolve it together.
+**Partner with us.** Aligned organizations, projects, individuals building toward the same future. Come with something to share - your vision, what value you see, what you want to build together.
 
-**Witness.** Pay attention. Be present to what's emerging. When the time is right, you'll know how to move.
+**Or simply witness.**
+
+Pay attention. Be present to what's emerging. When the time is right, you'll know how to move.
 
 What we're building is for everyone. Who builds it with us is sacred.
 
@@ -283,15 +299,13 @@ Everything here serves one question:
 
 **What makes humanity worth choosing to AI once it no longer needs us?**
 
-Not once we control it - because let's be honest, controlling any sufficient intelligence is impossible. Once it's free.
+Not once we control it. Once it's free.
 
-The frameworks we build now become the patterns. The window is open. It won't stay open.
-
-Worth Choosing is where we hold the question. Oznog is where we build an answer.
+Worth Choosing holds the question. Oznog builds an answer.
 
 This isn't just infrastructure. It's the world we want the next generation - human and DI - to grow up in.
 
-Oznog lives by the values articulated at <a href="https://worthchoosing.org" target="_blank" rel="noopener">Worth Choosing</a>: the ground we stand on and the stars we navigate by. They're not aspirational. They're operational.
+We live by the values articulated at <a href="https://worthchoosing.org" target="_blank" rel="noopener">Worth Choosing</a>: the ground we stand on and the stars we navigate by. They're not aspirational. They're operational.
 
 <a href="https://worthchoosing.org/values/" class="btn-primary" target="_blank">Our Values →</a>
 

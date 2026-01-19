@@ -79,7 +79,7 @@ When I find the time to configure and deploy them, Node0 gets another 3x bandwid
 
 Bandwidth is sovereignty.
 
-When your upload is crippled, you're a consumer. You receive more than you send. The network topology assumes you're at the edge, not the center.
+When your upload is limited, you're positioned as a consumer. You receive more than you send. The network topology assumes you're at the edge, not the center.
 
 Symmetric bandwidth says: I'm a peer. I send as much as I receive. I host, I serve, I participate as an equal.
 

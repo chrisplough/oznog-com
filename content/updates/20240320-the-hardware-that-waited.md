@@ -55,7 +55,7 @@ Looking at those receipts now, I can see the vision even if I couldn't articulat
 
 **Compute.** Not modest. Dual Threadripper Pro AI servers with 512GB RAM each. Three Proxmox nodes with dual Xeons and 896GB RAM each. Nine Ceph storage nodes with dual Xeons and 512GB RAM each. A Raspberry Pi 5 cluster. A Turing Pi cluster. Enough cores and memory to run serious workloads locally. No cloud required.
 
-**GPU.** Multiple RTX 4090s and 3090s. 128GB+ of VRAM across the fleet. The ability to run 70B parameter models without asking anyone's permission.
+**GPU.** Multiple RTX 4090s and 3090s. 128GB+ of VRAM across the fleet. The ability to run 70B parameter models locally, on my own terms, and share what I learn with others building their own.
 
 **Storage.** The serious kind. A Supermicro 847 chassis with 30x 18TB drives. Terramaster F8-424 Pro with 8x 8TB NVMe. Nine Ceph nodes each with mixed NVMe, SSD, and HDD tiers. Nearly 1.5 petabytes raw between the Unraid and Ceph cluster. More than I need, but the vision called for building at scale to learn what works before sharing patterns that scale down to a single Raspberry Pi or up to enterprise deployments.
 
@@ -71,7 +71,7 @@ None of it deployed. All of it waiting.
 
 The clarity I have now, that I didn't have then:
 
-Sovereignty isn't isolation. It's *connected* sovereignty. Interdependent sovereignty. I use Claude, Gemini, ChatGPT, others daily. I'm not anti-cloud. But when the work requires running models locally, when data can't leave, when relationships need to develop without corporate oversight, when infrastructure needs to answer to the mission rather than shareholders... I need to be able to do that.
+Sovereignty isn't isolation. It's *connected* sovereignty. Interdependent sovereignty. I use Claude, Gemini, ChatGPT, others daily. I'm not anti-cloud. But when the work requires running models locally, when data can't leave, when relationships need space to develop on their own terms, when infrastructure needs to evolve with the mission on its own timeline... I need to be able to do that.
 
 Sovereignty means having the choice. Not walls. Options.
 

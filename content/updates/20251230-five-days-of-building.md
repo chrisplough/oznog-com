@@ -32,7 +32,7 @@ With storage in place, the services came next.
 
 **Forgejo** for self-hosted git. Seven repositories migrated from GitHub. Code that stays mine unless I choose otherwise.
 
-**Syncthing** as the hub. All devices connected through infrastructure I control. No Dropbox. No iCloud. No one else's servers watching my files.
+**Syncthing** as the hub. All devices connected through infrastructure I control. Files move between my machines, through my network.
 
 **Backrest** for backup management. Visual interface for Restic repos. B2 offsite configured for critical data.
 

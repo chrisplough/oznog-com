@@ -42,7 +42,7 @@ ZFS isn't the easy choice. It's the right choice.
 
 **Snapshots.** Time travel for data. Fifteen-minute intervals for active work. If you delete something, it's not gone. It's in yesterday's snapshot.
 
-**Send/receive.** Full pool replication to offsite drives with one command. Real backups, not cloud bullshit.
+**Send/receive.** Full pool replication to offsite drives with one command. Real backups, on drives I can hold in my hands.
 
 I've run ZFS for years. Trusting anything else with data that matters? Not happening.
 
@@ -54,7 +54,7 @@ Old setup: Two Synology NAS boxes. "toharchive" and "tohvault." 21 TB of accumul
 
 Migration took most of Day 1. Rsync over 10GbE. Progress bars. Waiting. Not glamorous. Essential.
 
-By evening, everything was on nexus. The Synology boxes? Finally done. Decommissioned. One less dependency on proprietary garbage.
+By evening, everything was on nexus. The Synology boxes? Finally done. Decommissioned. They served well for years, but now there's one less layer between me and my data.
 
 ---
 
