@@ -360,6 +360,21 @@ nav img {
   max-width: 56rem !important;
 }
 
+/* Scroll arrow */
+.scroll-arrow {
+  font-size: 1.75rem;
+  font-weight: 550;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--oznog-text-primary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.scroll-arrow:hover {
+  color: var(--oznog-accent);
+}
+
 /* ===== CONTENT SECTIONS ===== */
 .content-section {
   padding-top: 5rem !important;

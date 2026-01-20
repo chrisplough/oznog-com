@@ -22,7 +22,7 @@ Because that's the only future worth building.
 The patterns being set now become the defaults for decades. The window to shape the foundations doesn't stay open.
 
 <br>
-<p style="text-align: center; font-weight: bold; font-size: 1.5rem; color: #E8E8E8;">↓</p>
+<p style="text-align: center;"><a href="#the-problem" class="scroll-arrow">↓</a></p>
 
 </div>
 
