@@ -1,0 +1,50 @@
+{{/* Schema.org JSON-LD structured data for Oznog */}}
+
+{{/* Organization schema - included on all pages */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Oznog Holdings LLC",
+  "url": "https://oznog.com",
+  "description": "Preparing humanity for interdependent relationship with Digital Intelligence.",
+  "founder": {
+    "@type": "Person",
+    "name": "Christoph Plough",
+    "url": "https://chrisplough.com"
+  },
+  "foundingDate": "2011",
+  "sameAs": [
+    "https://oznog.com",
+    "https://chrisplough.com"
+  ]
+}
+</script>
+
+{{/* Article schema - only on content pages with dates (updates, etc.) */}}
+{{ if and .IsPage .Date }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  {{ if .Lastmod }}"dateModified": "{{ .Lastmod.Format "2006-01-02" }}",{{ end }}
+  "author": {
+    "@type": "Organization",
+    "name": "Oznog Holdings LLC",
+    "url": "https://oznog.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Oznog Holdings LLC",
+    "url": "https://oznog.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }{{ if .Description }},
+  "description": "{{ .Description }}"{{ end }}
+}
+</script>
+{{ end }}
