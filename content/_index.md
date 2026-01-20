@@ -317,3 +317,16 @@ We live by the values articulated at <a href="https://worthchoosing.org" target=
 
 ---
 
+{{< section id="witness" class="content-section email-signup-section" >}}
+
+## Witness the build
+
+Dispatches from Node0. Infrequent. Substantive.
+
+<form action="https://buttondown.com/api/emails/embed-subscribe/oznog" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/oznog', 'popupwindow')" class="signup-form">
+  <input type="email" name="email" placeholder="your@email.com" required />
+  <button type="submit">Subscribe</button>
+</form>
+
+{{< /section >}}
+
