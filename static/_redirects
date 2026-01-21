@@ -1,0 +1,72 @@
+# Netlify redirects for oznog.com
+# Old DTRH (Down The Rabbit Hole) podcast URLs - redirect to homepage
+
+# Podcast main page
+/podcast                                    /                                           301
+/podcast/                                   /                                           301
+
+# Support page
+/i-would-really-love-your-support           /                                           301
+/i-would-really-love-your-support/          /                                           301
+
+# DTRH Episodes with full slugs
+/dtrh001-intro-are-you-an-explorer          /                                           301
+/dtrh001-intro-are-you-an-explorer/         /                                           301
+/dtrh002-choose-your-own-path               /                                           301
+/dtrh002-choose-your-own-path/              /                                           301
+/dtrh003-ameer-rosic-from-prison-to-optimal-health-warrior      /                       301
+/dtrh003-ameer-rosic-from-prison-to-optimal-health-warrior/     /                       301
+/dtrh004-joey-coleman-lifelong-relationships-in-business        /                       301
+/dtrh004-joey-coleman-lifelong-relationships-in-business/       /                       301
+/dtrh005-jayson-gaignard-building-genuine-communities           /                       301
+/dtrh005-jayson-gaignard-building-genuine-communities/          /                       301
+/dtrh006-michael-masterson-techno-artist-dj-to-clothing-craftsman   /                   301
+/dtrh006-michael-masterson-techno-artist-dj-to-clothing-craftsman/  /                   301
+/dtrh007-neeley-koester-bypassing-gatekeepers-as-an-artist      /                       301
+/dtrh007-neeley-koester-bypassing-gatekeepers-as-an-artist/     /                       301
+
+# DTRH Episodes with short slugs (dtrh001 through dtrh022)
+/dtrh001                                    /                                           301
+/dtrh001/                                   /                                           301
+/dtrh002                                    /                                           301
+/dtrh002/                                   /                                           301
+/dtrh003                                    /                                           301
+/dtrh003/                                   /                                           301
+/dtrh004                                    /                                           301
+/dtrh004/                                   /                                           301
+/dtrh005                                    /                                           301
+/dtrh005/                                   /                                           301
+/dtrh006                                    /                                           301
+/dtrh006/                                   /                                           301
+/dtrh007                                    /                                           301
+/dtrh007/                                   /                                           301
+/dtrh008                                    /                                           301
+/dtrh008/                                   /                                           301
+/dtrh009                                    /                                           301
+/dtrh009/                                   /                                           301
+/dtrh010                                    /                                           301
+/dtrh010/                                   /                                           301
+/dtrh011                                    /                                           301
+/dtrh011/                                   /                                           301
+/dtrh012                                    /                                           301
+/dtrh012/                                   /                                           301
+/dtrh013                                    /                                           301
+/dtrh013/                                   /                                           301
+/dtrh014                                    /                                           301
+/dtrh014/                                   /                                           301
+/dtrh015                                    /                                           301
+/dtrh015/                                   /                                           301
+/dtrh016                                    /                                           301
+/dtrh016/                                   /                                           301
+/dtrh017                                    /                                           301
+/dtrh017/                                   /                                           301
+/dtrh018                                    /                                           301
+/dtrh018/                                   /                                           301
+/dtrh019                                    /                                           301
+/dtrh019/                                   /                                           301
+/dtrh020                                    /                                           301
+/dtrh020/                                   /                                           301
+/dtrh021                                    /                                           301
+/dtrh021/                                   /                                           301
+/dtrh022                                    /                                           301
+/dtrh022/                                   /                                           301
