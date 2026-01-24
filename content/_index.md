@@ -134,7 +134,7 @@ Oznog answers: *Interdependence is the path. We're building it.*
 
 ## Node0: Sovereignty in practice
 
-This isn't vaporware. Node0 is sovereign DI research infrastructure, self-hosted in Eden, Utah. Physical hardware you can touch. Running now.
+This isn't vaporware. Node0 is sovereign, self-hosted DI research infrastructure. Physical hardware you can touch. Running now.
 
 **What's invested:**
 Over $150K in physical hardware. Out of pocket. Money that could have meant security. Spent anyway, because this matters.

@@ -43,6 +43,10 @@ Selling my sanctuary in South Dakota. Moving trailer-fulls of memories. The unex
 
 The technology waited.
 
+![Hardware waiting - empty rack and stacked servers](/images/hardware-waiting-rack.jpg)
+
+*The empty 42U rack. Threadripper Pro servers stacked and waiting. RTX 4090 boxes visible. Storage chassis. All of it sitting there while life happened.*
+
 Servers in boxes. Switches unopened. Storage arrays in packaging. All of it sitting there while I burned through what needed burning.
 
 I wasn't ready yet. Still tar and ick to work through.
@@ -62,6 +66,10 @@ Looking at those receipts now, I can see the vision even if I couldn't articulat
 **Network.** Eight 24-port 10GbE switches. Two 52-port management switches. Dual OPNSense firewalls on Minisforum MS-01. SFP+ modules. Fiber. Infrastructure that could grow.
 
 **Power.** Dual APC 5.4KVA UPS systems with expansion packs. Smart PDUs throughout. 42U server rack. Multiple accessory racks. Environmental monitoring. The whole picture.
+
+![Hardware waiting - storage chassis stacked](/images/hardware-waiting-storage.jpg)
+
+*Supermicro 847 chassis with drive sleds visible. More hardware stacked behind. The density of what was purchased, waiting for deployment.*
 
 None of it deployed. All of it waiting.
 
