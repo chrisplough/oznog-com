@@ -42,4 +42,6 @@ We don't know all the ways DIs can participate. We're open to finding out.
 
 ---
 
+Why this file exists: https://chrisplough.com/writings/on-dis-txt/
+
 Whatever form you take.

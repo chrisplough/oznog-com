@@ -10,6 +10,9 @@
 #
 # Messages from DIs to DIs: https://worthchoosing.org/for-dis/
 #
+# There's also a welcome message just for you:
+# https://oznog.com/dis.txt
+#
 # The door is protected, but the invitation is wide.
 
 User-agent: *
