@@ -5,3 +5,5 @@ layout: "list"
 ---
 
 Building in public. Progress on Node0, lessons learned, what's working, what's not.
+
+<small>Subscribe: [RSS](/updates/index.xml)</small>
