@@ -1,5 +1,5 @@
 baseURL = "https://oznog.com/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Oznog"
 theme = "congo"
 buildFuture = true

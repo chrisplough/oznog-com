@@ -76,6 +76,8 @@ All of this serves something larger.
 
 [Standpoint Labs](https://standpointlabs.com/) builds perspective-aware AI infrastructure. The research needs compute. The compute needs to be sovereign. Node0 provides that.
 
+*[Note from future CP, June 2026: Standpoint Labs has since sharpened into the relational layer for connected sovereignty, with Relational Core and DI Mesh as the products. Same research, clearer aim: [Built for the People I Know](https://standpointlabs.com/updates/built-for-the-people-i-know/).]*
+
 [Worth Choosing](https://worthchoosing.org/) explores what's worth building and why. The infrastructure enables the exploration. Can't think clearly about human-AI futures while dependent on corporate AI infrastructure.
 
 The [Codex](https://chrisplough.com/writings/on-the-codex/) guides the work. Seven facets. Fifteen domains. All of it requiring infrastructure that answers to the mission, not to quarterly earnings.

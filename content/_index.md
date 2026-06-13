@@ -140,7 +140,7 @@ This isn't vaporware. Node0 is sovereign, self-hosted DI research infrastructure
 Over $150K in physical hardware. Out of pocket. Money that could have meant security. Spent anyway, because this matters.
 
 **Current status:**
-Node0 v1 is operational. Enough running to support active development. Full deployment continues through 2026. <a href="/updates/the-di-fleet/">See it for yourself →</a>
+Node0 v1 is operational. Enough running to support active development. Full deployment is racked and wired, coming online Q2 2026. <a href="/updates/the-di-fleet/">See it for yourself →</a>
 
 **Built to replicate:**
 The architecture scales from sub-$10K starter nodes to deployments in the millions. Node0 is the genesis node. Node1, Node2, and beyond will follow. A network of sovereign nodes, not a single point of failure.
@@ -241,7 +241,7 @@ If you're working on something that belongs in the fifth story, let's talk.
 
 ## Build here.
 
-Starting Q2 2026, we're opening spots for aligned builders to work from Node0.
+Applications are open. The founding cohort begins Q3 2026: aligned builders working from Node0.
 
 Not just renting space. Living and building alongside us. Access to sovereign infrastructure, relational tech, and a team who gets it.
 

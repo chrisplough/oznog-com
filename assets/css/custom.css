@@ -1623,3 +1623,23 @@ ul.mt-8.flex-row li:last-child a:hover,
   background-color: var(--oznog-accent-hover);
   border-color: var(--oznog-accent-hover);
 }
+
+/* ============================================
+   Reduced motion: respect user preference
+   Added 20260612. Stops the continuous logo pulse
+   for users who request reduced motion; keeps the
+   one-time fade-in, which is brief and non-looping.
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .logo img,
+  header .site-logo img,
+  .site-name img,
+  header a[href="/"] img,
+  nav a[href="/"] img,
+  header nav a img,
+  header > nav img,
+  header div a img {
+    animation: logoFadeIn 0.6s ease-out forwards;
+  }
+}
