@@ -24,6 +24,10 @@
        Re-sync this file if Congo is upgraded past v2.14.0. */}}
   {{ $jsAppearance := resources.Get "js/appearance.js" | resources.Minify }}
   <script>{{ $jsAppearance.Content | safeJS }}</script>
+  {{/* Paint the dark base on the very first frame, before the render-blocking
+       CSS bundle loads, to prevent a white flash on navigation (oznog is a
+       dark-only site). Matches --oznog-bg-primary and defaultThemeColor. */}}
+  <style>html,body{background-color:#0D0D0D}</style>
   {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorScheme | default "congo")) }}
   {{ if not $cssScheme }}
     {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
